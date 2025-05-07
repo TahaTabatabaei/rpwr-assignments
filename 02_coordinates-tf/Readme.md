@@ -1,0 +1,3 @@
+- You can run cells in the tasks section and everything should be fine. I assume you open the rviz and run the turtlesim before running cells.
+- the config in task 1 is the updated version after generating the results for task 3.
+- To finish it, just interrrupt the final cell. I used a try catch block so it will terminate the nodes and rclpy it self.
