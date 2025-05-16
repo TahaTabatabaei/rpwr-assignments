@@ -1,0 +1,8 @@
+++ Rviz config is complete
+++++ Turtle marker complete
++++/- both turtles have a marker, but their creation is quite inefficient. Fetching the time from the node takes computation time too. The creation of the markers takes longer than the publishers frequency, which gives the visualization hiccups.
++ markers rotate
++ Code runs out of the box 
+
+
+11/12
