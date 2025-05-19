@@ -1,0 +1,29 @@
+[0.904s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/src/turtle_party': PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(pycram-venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_party build --build-base /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build install --record /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log --single-version-externally-managed install_data
+[1.163s] running egg_info
+[1.180s] writing ../../build/turtle_party/turtle_party.egg-info/PKG-INFO
+[1.180s] writing dependency_links to ../../build/turtle_party/turtle_party.egg-info/dependency_links.txt
+[1.181s] writing entry points to ../../build/turtle_party/turtle_party.egg-info/entry_points.txt
+[1.181s] writing requirements to ../../build/turtle_party/turtle_party.egg-info/requires.txt
+[1.181s] writing top-level names to ../../build/turtle_party/turtle_party.egg-info/top_level.txt
+[1.217s] reading manifest file '../../build/turtle_party/turtle_party.egg-info/SOURCES.txt'
+[1.218s] adding license file 'LICENSE'
+[1.219s] writing manifest file '../../build/turtle_party/turtle_party.egg-info/SOURCES.txt'
+[1.219s] running build
+[1.219s] running build_py
+[1.220s] copying turtle_party/turtle_tf2_listener.py -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build/lib/turtle_party
+[1.220s] running install
+[1.226s] running install_lib
+[1.245s] copying /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build/lib/turtle_party/turtle_tf2_listener.py -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party
+[1.246s] byte-compiling /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party/turtle_tf2_listener.py to turtle_tf2_listener.cpython-312.pyc
+[1.247s] running install_data
+[1.247s] copying package.xml -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/share/turtle_party
+[1.247s] copying launch/turtle_tf2_demo_launch.py -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/share/turtle_party/launch
+[1.247s] running install_egg_info
+[1.266s] removing '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party-0.0.0-py3.12.egg-info' (and everything under it)
+[1.266s] Copying ../../build/turtle_party/turtle_party.egg-info to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party-0.0.0-py3.12.egg-info
+[1.267s] running install_scripts
+[1.392s] Installing follow script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.392s] Installing turtle_tf2_broadcaster script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.392s] Installing turtle_tf2_listener script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.392s] writing list of installed files to '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log'
+[1.415s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/src/turtle_party' returned '0': PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(pycram-venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_party build --build-base /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build install --record /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log --single-version-externally-managed install_data

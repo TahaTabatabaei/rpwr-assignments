@@ -1,0 +1,27 @@
+[0.808s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/src/turtle_party': PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(pycram-venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_party build --build-base /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build install --record /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log --single-version-externally-managed install_data
+[1.073s] running egg_info
+[1.090s] writing ../../build/turtle_party/turtle_party.egg-info/PKG-INFO
+[1.091s] writing dependency_links to ../../build/turtle_party/turtle_party.egg-info/dependency_links.txt
+[1.091s] writing entry points to ../../build/turtle_party/turtle_party.egg-info/entry_points.txt
+[1.091s] writing requirements to ../../build/turtle_party/turtle_party.egg-info/requires.txt
+[1.091s] writing top-level names to ../../build/turtle_party/turtle_party.egg-info/top_level.txt
+[1.130s] reading manifest file '../../build/turtle_party/turtle_party.egg-info/SOURCES.txt'
+[1.130s] adding license file 'LICENSE'
+[1.131s] writing manifest file '../../build/turtle_party/turtle_party.egg-info/SOURCES.txt'
+[1.131s] running build
+[1.131s] running build_py
+[1.131s] copying turtle_party/follow.py -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build/lib/turtle_party
+[1.132s] running install
+[1.139s] running install_lib
+[1.157s] copying /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build/lib/turtle_party/follow.py -> /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party
+[1.158s] byte-compiling /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party/follow.py to follow.cpython-312.pyc
+[1.159s] running install_data
+[1.160s] running install_egg_info
+[1.178s] removing '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party-0.0.0-py3.12.egg-info' (and everything under it)
+[1.179s] Copying ../../build/turtle_party/turtle_party.egg-info to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages/turtle_party-0.0.0-py3.12.egg-info
+[1.180s] running install_scripts
+[1.306s] Installing follow script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.306s] Installing turtle_tf2_broadcaster script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.306s] Installing turtle_tf2_listener script to /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/turtle_party
+[1.307s] writing list of installed files to '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log'
+[1.340s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/src/turtle_party' returned '0': PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/install/turtle_party/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(pycram-venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtle_party build --build-base /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/build install --record /home/tahaos/Code/Projects/rpwr-assignments/03_ros/ws/ros/build/turtle_party/install.log --single-version-externally-managed install_data
