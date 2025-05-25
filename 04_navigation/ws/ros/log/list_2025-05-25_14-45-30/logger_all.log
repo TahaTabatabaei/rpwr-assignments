@@ -1,0 +1,285 @@
+[0.084s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '--names-only']
+[0.084s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='list', build_base='build', ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, topological_order=False, names_only=True, paths_only=False, topological_graph=False, topological_graph_dot=False, topological_graph_density=False, topological_graph_legend=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x77c5b2724200>, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x77c5b2703320>, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x77c5b2703320>>, mixin_verb=('list',))
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.118s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extensions ['python_setup_py']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim) by extension 'python_setup_py'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'ros'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['cmake', 'python']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'cmake'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'python'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extensions ['python_setup_py']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common) by extension 'python_setup_py'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_common_bringup) by extension 'ros'
+[0.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_common/irobot_create_common_bringup' with type 'ros.ament_cmake' and name 'irobot_create_common_bringup'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_control) by extension 'ros'
+[0.144s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_common/irobot_create_control' with type 'ros.ament_cmake' and name 'irobot_create_control'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_description) by extension 'ros'
+[0.145s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_common/irobot_create_description' with type 'ros.ament_cmake' and name 'irobot_create_description'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_nodes) by extension 'ros'
+[0.147s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_common/irobot_create_nodes' with type 'ros.ament_cmake' and name 'irobot_create_nodes'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extension 'ignore_ament_install'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extensions ['colcon_pkg']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extension 'colcon_pkg'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extensions ['colcon_meta']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extension 'colcon_meta'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extensions ['ros']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_common/irobot_create_toolbox) by extension 'ros'
+[0.148s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_common/irobot_create_toolbox' with type 'ros.ament_cmake' and name 'irobot_create_toolbox'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_bringup) by extension 'ros'
+[0.149s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_gz/irobot_create_gz_bringup' with type 'ros.ament_cmake' and name 'irobot_create_gz_bringup'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_plugins) by extension 'ros'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_gz/irobot_create_gz_plugins' with type 'ros.ament_cmake' and name 'irobot_create_gz_plugins'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_sim) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_gz/irobot_create_gz_sim' with type 'ros.ament_cmake' and name 'irobot_create_gz_sim'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox' with type 'ros.ament_cmake' and name 'irobot_create_gz_toolbox'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_description) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4/turtlebot4_description' with type 'ros.ament_cmake' and name 'turtlebot4_description'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_msgs) by extension 'ros'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4/turtlebot4_msgs' with type 'ros.ament_cmake' and name 'turtlebot4_msgs'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_navigation) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4/turtlebot4_navigation' with type 'ros.ament_cmake' and name 'turtlebot4_navigation'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4/turtlebot4_node) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4/turtlebot4_node' with type 'ros.ament_cmake' and name 'turtlebot4_node'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'cmake'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_bringup) by extension 'ros'
+[0.159s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_gz_bringup' with type 'ros.ament_cmake' and name 'turtlebot4_gz_bringup'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_gui_plugins) by extension 'ros'
+[0.160s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_gz_gui_plugins' with type 'ros.ament_cmake' and name 'turtlebot4_gz_gui_plugins'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_gz_toolbox) by extension 'ros'
+[0.161s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_gz_toolbox' with type 'ros.ament_cmake' and name 'turtlebot4_gz_toolbox'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot4_simulator/turtlebot4_simulator) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot4_simulator/turtlebot4_simulator' with type 'ros.ament_cmake' and name 'turtlebot4_simulator'
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults

@@ -1,0 +1,117 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ef02966919f5a9d0b814.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "Turtlebot4Hmi",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Turtlebot4Hmi-bcbfb86b46e3fa8bd2cd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Turtlebot4Hmi",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "turtlebot4_gz_gui_plugins",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Turtlebot4Hmi::@7ab402902ed6000adbb3",
+					"jsonFile" : "target-Turtlebot4Hmi-1ee8c17ee166e9a5227d.json",
+					"name" : "Turtlebot4Hmi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Turtlebot4Hmi_autogen::@7ab402902ed6000adbb3",
+					"jsonFile" : "target-Turtlebot4Hmi_autogen-16e5a9d71ac5876f3b12.json",
+					"name" : "Turtlebot4Hmi_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Turtlebot4Hmi_autogen_timestamp_deps::@7ab402902ed6000adbb3",
+					"jsonFile" : "target-Turtlebot4Hmi_autogen_timestamp_deps-e0459dc19cfa6564de08.json",
+					"name" : "Turtlebot4Hmi_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtlebot4_gz_gui_plugins_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtlebot4_gz_gui_plugins_uninstall-1187b7e16dfd2a41218b.json",
+					"name" : "turtlebot4_gz_gui_plugins_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-285d57b3017659e80c9e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_gz_gui_plugins",
+		"source" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4_simulator/turtlebot4_gz_gui_plugins"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

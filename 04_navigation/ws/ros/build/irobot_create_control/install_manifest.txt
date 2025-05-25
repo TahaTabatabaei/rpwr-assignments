@@ -1,0 +1,17 @@
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control//launch/include/control.py
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control//config/control.yaml
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/ament_index/resource_index/package_run_dependencies/irobot_create_control
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/ament_index/resource_index/parent_prefix_path/irobot_create_control
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/environment/ament_prefix_path.sh
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/environment/ament_prefix_path.dsv
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/environment/path.sh
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/environment/path.dsv
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/local_setup.bash
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/local_setup.sh
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/local_setup.zsh
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/local_setup.dsv
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/package.dsv
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/ament_index/resource_index/packages/irobot_create_control
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/cmake/irobot_create_controlConfig.cmake
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/cmake/irobot_create_controlConfig-version.cmake
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_control/share/irobot_create_control/package.xml

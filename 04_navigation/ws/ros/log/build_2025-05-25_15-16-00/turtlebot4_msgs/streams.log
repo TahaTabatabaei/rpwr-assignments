@@ -1,0 +1,23 @@
+[0.031s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs -- -j12 -l12
+[0.099s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[0.112s] [  1%] Built target ament_cmake_python_copy_turtlebot4_msgs
+[0.148s] Traceback (most recent call last):
+[0.148s]   File "/opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description", line 21, in <module>
+[0.148s]     from rosidl_generator_type_description import generate_type_hash
+[0.148s]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py", line 24, in <module>
+[0.149s]     from rosidl_parser.parser import parse_idl_file
+[0.149s]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_parser/parser.py", line 20, in <module>
+[0.149s]     from lark import Lark
+[0.149s] ModuleNotFoundError: No module named 'lark'
+[0.159s] gmake[2]: *** [CMakeFiles/turtlebot4_msgs__rosidl_generator_type_description.dir/build.make:79: rosidl_generator_type_description/turtlebot4_msgs/msg/UserLed.json] Error 1
+[0.159s] gmake[1]: *** [CMakeFiles/Makefile2:215: CMakeFiles/turtlebot4_msgs__rosidl_generator_type_description.dir/all] Error 2
+[0.159s] gmake[1]: *** Waiting for unfinished jobs....
+[0.499s] running egg_info
+[0.526s] writing turtlebot4_msgs.egg-info/PKG-INFO
+[0.527s] writing dependency_links to turtlebot4_msgs.egg-info/dependency_links.txt
+[0.527s] writing top-level names to turtlebot4_msgs.egg-info/top_level.txt
+[0.596s] reading manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+[0.597s] writing manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+[0.639s] [  1%] Built target ament_cmake_python_build_turtlebot4_msgs_egg
+[0.641s] gmake: *** [Makefile:146: all] Error 2
+[0.642s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs -- -j12 -l12

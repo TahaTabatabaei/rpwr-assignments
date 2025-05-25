@@ -1,0 +1,35 @@
+[0.031s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_msgs -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs
+[0.278s] -- The C compiler identification is GNU 13.3.0
+[0.529s] -- The CXX compiler identification is GNU 13.3.0
+[0.553s] -- Detecting C compiler ABI info
+[0.666s] -- Detecting C compiler ABI info - done
+[0.683s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.683s] -- Detecting C compile features
+[0.684s] -- Detecting C compile features - done
+[0.696s] -- Detecting CXX compiler ABI info
+[0.824s] -- Detecting CXX compiler ABI info - done
+[0.833s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.834s] -- Detecting CXX compile features
+[0.834s] -- Detecting CXX compile features - done
+[0.843s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.987s] -- Found Python3: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.230s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.253s] Traceback (most recent call last):
+[1.253s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[1.253s]     from catkin_pkg.package import parse_package_string
+[1.253s] ModuleNotFoundError: No module named 'catkin_pkg'
+[1.257s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.257s]   
+[1.258s]   execute_process(/home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3
+[1.258s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.258s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_msgs/package.xml
+[1.258s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs/ament_cmake_core/package.cmake)
+[1.258s]   returned error code 1
+[1.258s] Call Stack (most recent call first):
+[1.258s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.258s]   /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[1.258s]   CMakeLists.txt:23 (ament_lint_auto_find_test_dependencies)
+[1.258s] 
+[1.258s] [0m
+[1.258s] -- Configuring incomplete, errors occurred!
+[1.265s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_msgs -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs

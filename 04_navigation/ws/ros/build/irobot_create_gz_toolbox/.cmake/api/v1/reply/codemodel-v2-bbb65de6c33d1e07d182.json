@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-185650cac70478578b7d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "irobot_create_gz_toolbox",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "interface_buttons_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-interface_buttons_node-7a857d059463ecdf392c.json",
+					"name" : "interface_buttons_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "irobot_create_gz_interface_buttons_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-irobot_create_gz_interface_buttons_lib-07b9902684868d7108ee.json",
+					"name" : "irobot_create_gz_interface_buttons_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "irobot_create_gz_pose_republisher_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-irobot_create_gz_pose_republisher_lib-436525d6886cf6257339.json",
+					"name" : "irobot_create_gz_pose_republisher_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "irobot_create_gz_sensors_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-irobot_create_gz_sensors_lib-d47830c3c859f0e8b2ef.json",
+					"name" : "irobot_create_gz_sensors_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "irobot_create_gz_toolbox_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-irobot_create_gz_toolbox_uninstall-b009576b5dc992e39974.json",
+					"name" : "irobot_create_gz_toolbox_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pose_republisher_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pose_republisher_node-d122537354427c62fa5e.json",
+					"name" : "pose_republisher_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sensors_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sensors_node-73db49f8205ed3ef97c4.json",
+					"name" : "sensors_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-16a0ec2199c455ddb6ff.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_toolbox",
+		"source" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/create3_sim/irobot_create_gz/irobot_create_gz_toolbox"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

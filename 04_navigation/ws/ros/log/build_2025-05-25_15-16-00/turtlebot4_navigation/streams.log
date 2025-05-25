@@ -1,0 +1,9 @@
+[0.030s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation -- -j12 -l12
+[0.110s] Built target ament_cmake_python_copy_turtlebot4_navigation
+[0.499s] running egg_info
+[0.525s] writing turtlebot4_navigation.egg-info/PKG-INFO
+[0.525s] writing dependency_links to turtlebot4_navigation.egg-info/dependency_links.txt
+[0.525s] writing top-level names to turtlebot4_navigation.egg-info/top_level.txt
+[0.605s] reading manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+[0.607s] writing manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+[0.652s] Built target ament_cmake_python_build_turtlebot4_navigation_egg

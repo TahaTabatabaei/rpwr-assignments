@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7fb36690d7d4938336d3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "turtlebot4_node",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "turtlebot4_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtlebot4_node-a6db4a85bd0f1ce01ef5.json",
+					"name" : "turtlebot4_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtlebot4_node_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtlebot4_node_lib-ac6e41860b6bdddfc6c4.json",
+					"name" : "turtlebot4_node_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "turtlebot4_node_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-turtlebot4_node_uninstall-4090410a2d34b293b2a1.json",
+					"name" : "turtlebot4_node_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1f210491bbc2175632b7.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node",
+		"source" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_node"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

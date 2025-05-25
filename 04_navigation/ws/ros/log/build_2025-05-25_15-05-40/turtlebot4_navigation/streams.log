@@ -1,0 +1,21 @@
+[0.035s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_navigation -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_navigation
+[0.050s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.287s] Traceback (most recent call last):
+[0.287s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[0.287s]     from catkin_pkg.package import parse_package_string
+[0.288s] ModuleNotFoundError: No module named 'catkin_pkg'
+[0.291s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[0.291s]   
+[0.291s]   execute_process(/home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3
+[0.291s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[0.292s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_navigation/package.xml
+[0.292s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation/ament_cmake_core/package.cmake)
+[0.292s]   returned error code 1
+[0.292s] Call Stack (most recent call first):
+[0.292s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[0.292s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:60 (ament_package_xml)
+[0.293s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[0.293s]   CMakeLists.txt:27 (ament_python_install_package)
+[0.293s] 
+[0.293s] [0m
+[0.296s] -- Configuring incomplete, errors occurred!

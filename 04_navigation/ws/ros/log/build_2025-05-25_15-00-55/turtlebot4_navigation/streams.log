@@ -1,0 +1,35 @@
+[0.061s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_navigation -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_navigation
+[0.265s] -- The C compiler identification is GNU 13.3.0
+[0.524s] -- The CXX compiler identification is GNU 13.3.0
+[0.543s] -- Detecting C compiler ABI info
+[0.651s] -- Detecting C compiler ABI info - done
+[0.660s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.661s] -- Detecting C compile features
+[0.661s] -- Detecting C compile features - done
+[0.673s] -- Detecting CXX compiler ABI info
+[0.794s] -- Detecting CXX compiler ABI info - done
+[0.806s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.806s] -- Detecting CXX compile features
+[0.806s] -- Detecting CXX compile features - done
+[0.818s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.961s] -- Found Python3: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.245s] Traceback (most recent call last):
+[1.245s]   File "/opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 22, in <module>
+[1.245s]     from catkin_pkg.package import parse_package_string
+[1.245s] ModuleNotFoundError: No module named 'catkin_pkg'
+[1.251s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[1.251s]   
+[1.252s]   execute_process(/home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3
+[1.252s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[1.252s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_navigation/package.xml
+[1.252s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation/ament_cmake_core/package.cmake)
+[1.252s]   returned error code 1
+[1.252s] Call Stack (most recent call first):
+[1.253s]   /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[1.253s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:60 (ament_package_xml)
+[1.253s]   /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:39 (_ament_cmake_python_install_package)
+[1.253s]   CMakeLists.txt:27 (ament_python_install_package)
+[1.253s] 
+[1.253s] [0m
+[1.253s] -- Configuring incomplete, errors occurred!
+[1.256s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_navigation' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_navigation -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_navigation

@@ -1,0 +1,263 @@
+[0.038s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs -- -j12 -l12
+[0.103s] [  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[0.117s] [  1%] Built target ament_cmake_python_copy_turtlebot4_msgs
+[0.520s] running egg_info
+[0.559s] writing turtlebot4_msgs.egg-info/PKG-INFO
+[0.559s] writing dependency_links to turtlebot4_msgs.egg-info/dependency_links.txt
+[0.560s] writing top-level names to turtlebot4_msgs.egg-info/top_level.txt
+[0.654s] reading manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+[0.655s] writing manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+[0.665s] [  1%] Built target turtlebot4_msgs__rosidl_generator_type_description
+[0.677s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.686s] [  3%] Built target ament_cmake_python_build_turtlebot4_msgs_egg
+[0.690s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.243s] [  5%] Built target turtlebot4_msgs__cpp
+[1.316s] [  7%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_led__description.c.o[0m
+[1.318s] [  9%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_button__type_support.c.o[0m
+[1.318s] [ 11%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_display__functions.c.o[0m
+[1.319s] [ 14%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_led__type_support.c.o[0m
+[1.319s] [ 14%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_led__functions.c.o[0m
+[1.320s] [ 16%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_button__description.c.o[0m
+[1.320s] [ 18%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_button__functions.c.o[0m
+[1.320s] [ 20%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_display__description.c.o[0m
+[1.320s] [ 22%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_c.dir/rosidl_generator_c/turtlebot4_msgs/msg/detail/user_display__type_support.c.o[0m
+[1.394s] [ 24%] [32m[1mLinking C shared library libturtlebot4_msgs__rosidl_generator_c.so[0m
+[1.437s] [ 24%] Built target turtlebot4_msgs__rosidl_generator_c
+[1.449s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.449s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.449s] [ 29%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.449s] [ 31%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.451s] [ 33%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.453s] [ 35%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.904s] [ 37%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot4_msgs/msg/user_button__type_support.cpp.o[0m
+[1.907s] [ 38%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot4_msgs/msg/user_led__type_support.cpp.o[0m
+[1.908s] [ 40%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot4_msgs/msg/user_display__type_support.cpp.o[0m
+[1.909s] [ 42%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtlebot4_msgs/msg/user_led__type_support.cpp.o[0m
+[1.910s] [ 44%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtlebot4_msgs/msg/user_display__type_support.cpp.o[0m
+[1.910s] [ 46%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtlebot4_msgs/msg/user_button__type_support.cpp.o[0m
+[1.986s] [ 48%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtlebot4_msgs/msg/detail/user_led__type_support.cpp.o[0m
+[1.987s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtlebot4_msgs/msg/detail/user_display__type_support.cpp.o[0m
+[1.990s] [ 51%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtlebot4_msgs/msg/detail/user_button__type_support.cpp.o[0m
+[2.002s] [ 53%] [32m[1mLinking CXX shared library libturtlebot4_msgs__rosidl_typesupport_c.so[0m
+[2.091s] [ 53%] Built target turtlebot4_msgs__rosidl_typesupport_c
+[2.115s] [ 55%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtlebot4_msgs/msg/detail/dds_fastrtps/user_display__type_support.cpp.o[0m
+[2.115s] [ 57%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtlebot4_msgs/msg/detail/dds_fastrtps/user_button__type_support.cpp.o[0m
+[2.116s] [ 59%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtlebot4_msgs/msg/detail/dds_fastrtps/user_led__type_support.cpp.o[0m
+[2.383s] [ 61%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtlebot4_msgs/msg/detail/user_button__type_support.c.o[0m
+[2.397s] [ 62%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtlebot4_msgs/msg/detail/user_led__type_support.c.o[0m
+[2.495s] [ 64%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtlebot4_msgs/msg/detail/user_display__type_support.c.o[0m
+[2.551s] [ 66%] [32m[1mLinking CXX shared library libturtlebot4_msgs__rosidl_typesupport_cpp.so[0m
+[2.583s] [ 70%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/turtlebot4_msgs/msg/detail/user_button__type_support_c.cpp.o[0m
+[2.583s] [ 70%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/turtlebot4_msgs/msg/detail/user_led__type_support_c.cpp.o[0m
+[2.587s] [ 72%] [32mBuilding CXX object CMakeFiles/turtlebot4_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/turtlebot4_msgs/msg/detail/user_display__type_support_c.cpp.o[0m
+[2.588s] [ 74%] [32m[1mLinking C shared library libturtlebot4_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.648s] [ 74%] Built target turtlebot4_msgs__rosidl_typesupport_introspection_c
+[2.648s] [ 74%] Built target turtlebot4_msgs__rosidl_typesupport_cpp
+[2.661s] [ 75%] [32m[1mLinking CXX shared library libturtlebot4_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[2.769s] [ 75%] Built target turtlebot4_msgs__rosidl_typesupport_introspection_cpp
+[3.017s] [ 77%] [32m[1mLinking CXX shared library libturtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.111s] [ 77%] Built target turtlebot4_msgs__rosidl_typesupport_fastrtps_cpp
+[3.215s] [ 79%] [32m[1mLinking CXX shared library libturtlebot4_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.303s] [ 79%] Built target turtlebot4_msgs__rosidl_typesupport_fastrtps_c
+[3.326s] [ 79%] Built target turtlebot4_msgs
+[3.352s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.107s] [ 81%] Built target turtlebot4_msgs__py
+[4.133s] [ 87%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_py.dir/rosidl_generator_py/turtlebot4_msgs/msg/_user_display_s.c.o[0m
+[4.133s] [ 87%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_py.dir/rosidl_generator_py/turtlebot4_msgs/msg/_user_button_s.c.o[0m
+[4.133s] [ 87%] [32mBuilding C object CMakeFiles/turtlebot4_msgs__rosidl_generator_py.dir/rosidl_generator_py/turtlebot4_msgs/msg/_user_led_s.c.o[0m
+[4.312s] [ 88%] [32m[1mLinking C shared library libturtlebot4_msgs__rosidl_generator_py.so[0m
+[4.357s] [ 88%] Built target turtlebot4_msgs__rosidl_generator_py
+[4.380s] [ 94%] [32mBuilding C object CMakeFiles/turtlebot4_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[4.380s] [ 94%] [32mBuilding C object CMakeFiles/turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.381s] [ 94%] [32mBuilding C object CMakeFiles/turtlebot4_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.491s] [ 96%] [32m[1mLinking C shared module rosidl_generator_py/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_c.so[0m
+[4.491s] [ 98%] [32m[1mLinking C shared module rosidl_generator_py/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[4.499s] [100%] [32m[1mLinking C shared module rosidl_generator_py/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[4.528s] [100%] Built target turtlebot4_msgs_s__rosidl_typesupport_c
+[4.528s] [100%] Built target turtlebot4_msgs_s__rosidl_typesupport_introspection_c
+[4.537s] [100%] Built target turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c
+[4.551s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs -- -j12 -l12
+[4.552s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs
+[4.561s] -- Install configuration: ""
+[4.561s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/ament_index/resource_index/rosidl_interfaces/turtlebot4_msgs
+[4.561s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserLed.json
+[4.561s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserButton.json
+[4.561s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserDisplay.json
+[4.561s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_led.h
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__struct.h
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__description.c
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__type_support.h
+[4.562s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__description.c
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__type_support.c
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__functions.h
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__type_support.c
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__functions.c
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__struct.h
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__type_support.h
+[4.563s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__type_support.c
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__functions.c
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__functions.h
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__struct.h
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__functions.c
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__type_support.h
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__functions.h
+[4.564s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__description.c
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_button.h
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_display.h
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/library_path.sh
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/library_path.dsv
+[4.565s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_generator_c.so
+[4.565s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_generator_c.so" to ""
+[4.566s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.566s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.566s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.566s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.566s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__rosidl_typesupport_fastrtps_c.h
+[4.566s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__rosidl_typesupport_fastrtps_c.h
+[4.566s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__rosidl_typesupport_fastrtps_c.h
+[4.566s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_fastrtps_c.so
+[4.566s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[4.567s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.567s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.567s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.567s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.567s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__rosidl_typesupport_introspection_c.h
+[4.567s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__rosidl_typesupport_introspection_c.h
+[4.567s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__type_support.c
+[4.567s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__type_support.c
+[4.568s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__type_support.c
+[4.568s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__rosidl_typesupport_introspection_c.h
+[4.568s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_introspection_c.so
+[4.568s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_introspection_c.so" to ""
+[4.568s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_c.so
+[4.568s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_c.so" to ""
+[4.568s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.569s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_led.hpp
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_button.hpp
+[4.569s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__type_support.hpp
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__type_support.hpp
+[4.569s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__builder.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__struct.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__builder.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__type_support.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__traits.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__struct.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__traits.hpp
+[4.570s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__traits.hpp
+[4.571s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__builder.hpp
+[4.571s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__struct.hpp
+[4.571s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/user_display.hpp
+[4.571s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.571s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.571s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.571s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__rosidl_typesupport_fastrtps_cpp.hpp
+[4.572s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__rosidl_typesupport_fastrtps_cpp.hpp
+[4.572s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/dds_fastrtps
+[4.572s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__rosidl_typesupport_fastrtps_cpp.hpp
+[4.572s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.572s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.so
+[4.572s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.572s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs
+[4.572s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg
+[4.573s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__rosidl_typesupport_introspection_cpp.hpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__rosidl_typesupport_introspection_cpp.hpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__rosidl_typesupport_introspection_cpp.hpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_led__type_support.cpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_button__type_support.cpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/include/turtlebot4_msgs/turtlebot4_msgs/msg/detail/user_display__type_support.cpp
+[4.573s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_introspection_cpp.so
+[4.574s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[4.574s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_cpp.so
+[4.574s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_typesupport_cpp.so" to ""
+[4.574s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/pythonpath.sh
+[4.574s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/pythonpath.dsv
+[4.574s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs-2.0.1-py3.12.egg-info
+[4.574s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs-2.0.1-py3.12.egg-info/dependency_links.txt
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs-2.0.1-py3.12.egg-info/top_level.txt
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs-2.0.1-py3.12.egg-info/PKG-INFO
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs-2.0.1-py3.12.egg-info/SOURCES.txt
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_display_s.c
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_led.py
+[4.575s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_led_s.c
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_button_s.c
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_button.py
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_display.py
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/__init__.py
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c.so
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_introspection_c.so
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_c.c
+[4.576s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.577s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/__init__.py
+[4.577s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_c.so
+[4.577s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/_turtlebot4_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[4.612s] Listing '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs'...
+[4.612s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/__init__.py'...
+[4.612s] Listing '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg'...
+[4.612s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/__init__.py'...
+[4.612s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_button.py'...
+[4.612s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_display.py'...
+[4.612s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/msg/_user_led.py'...
+[4.618s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c.so
+[4.618s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[4.618s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_introspection_c.so
+[4.619s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[4.619s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_c.so
+[4.619s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages/turtlebot4_msgs/turtlebot4_msgs_s__rosidl_typesupport_c.so" to ""
+[4.619s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_generator_py.so
+[4.620s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/libturtlebot4_msgs__rosidl_generator_py.so" to ""
+[4.620s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserLed.idl
+[4.620s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserButton.idl
+[4.620s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserDisplay.idl
+[4.620s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserLed.msg
+[4.620s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserButton.msg
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/msg/UserDisplay.msg
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/ament_index/resource_index/package_run_dependencies/turtlebot4_msgs
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/ament_index/resource_index/parent_prefix_path/turtlebot4_msgs
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/ament_prefix_path.sh
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/ament_prefix_path.dsv
+[4.621s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/path.sh
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/environment/path.dsv
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/local_setup.bash
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/local_setup.sh
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/local_setup.zsh
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/local_setup.dsv
+[4.622s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/package.dsv
+[4.623s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/ament_index/resource_index/packages/turtlebot4_msgs
+[4.623s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_generator_cExport.cmake
+[4.623s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_generator_cExport-noconfig.cmake
+[4.624s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[4.624s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.624s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_introspection_cExport.cmake
+[4.624s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.624s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_cExport.cmake
+[4.625s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[4.625s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_generator_cppExport.cmake
+[4.625s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.625s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.626s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[4.626s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.626s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_cppExport.cmake
+[4.626s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_generator_pyExport.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/export_turtlebot4_msgs__rosidl_generator_pyExport-noconfig.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/rosidl_cmake-extras.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[4.627s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgsConfig.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake/turtlebot4_msgsConfig-version.cmake
+[4.628s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/package.xml
+[4.631s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs

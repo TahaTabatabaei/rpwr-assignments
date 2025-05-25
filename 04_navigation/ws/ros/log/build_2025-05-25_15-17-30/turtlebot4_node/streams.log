@@ -1,0 +1,87 @@
+[0.010s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_node -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node
+[0.070s] -- The C compiler identification is GNU 13.3.0
+[0.136s] -- The CXX compiler identification is GNU 13.3.0
+[0.152s] -- Detecting C compiler ABI info
+[0.247s] -- Detecting C compiler ABI info - done
+[0.256s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.256s] -- Detecting C compile features
+[0.257s] -- Detecting C compile features - done
+[0.267s] -- Detecting CXX compiler ABI info
+[0.372s] -- Detecting CXX compiler ABI info - done
+[0.383s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.383s] -- Detecting CXX compile features
+[0.383s] -- Detecting CXX compile features - done
+[0.394s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.537s] -- Found Python3: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.743s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.851s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.891s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.929s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.971s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.134s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.144s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.270s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.295s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.319s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.498s] -- Found rclcpp_action: 28.1.9 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[1.611s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.638s] -- Found std_srvs: 5.3.6 (/opt/ros/jazzy/share/std_srvs/cmake)
+[1.677s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.747s] -- Found irobot_create_msgs: 3.0.0 (/opt/ros/jazzy/share/irobot_create_msgs/cmake)
+[1.787s] -- Found turtlebot4_msgs: 2.0.1 (/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/share/turtlebot4_msgs/cmake)
+[1.816s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.015s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.015s] -- Configured cppcheck include dirs: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_node/include
+[2.015s] -- Configured cppcheck exclude dirs and/or files: 
+[2.017s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.017s] -- Configured cpplint exclude dirs and/or files: 
+[2.018s] -- Added test 'lint_cmake' to check CMake code style
+[2.020s] -- Added test 'uncrustify' to check C / C++ code style
+[2.020s] -- Configured uncrustify additional arguments: 
+[2.023s] -- Added test 'xmllint' to check XML markup files
+[2.026s] -- Configuring done (2.0s)
+[2.051s] -- Generating done (0.0s)
+[2.060s] -- Build files have been written to: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node
+[2.070s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node' returned '0': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_node -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node
+[2.072s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node -- -j12 -l12
+[2.142s] [ 25%] [32mBuilding CXX object CMakeFiles/turtlebot4_node_lib.dir/src/main.cpp.o[0m
+[2.142s] [ 25%] [32mBuilding CXX object CMakeFiles/turtlebot4_node_lib.dir/src/turtlebot4.cpp.o[0m
+[2.143s] [ 37%] [32mBuilding CXX object CMakeFiles/turtlebot4_node_lib.dir/src/buttons.cpp.o[0m
+[2.143s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot4_node_lib.dir/src/leds.cpp.o[0m
+[2.147s] [ 62%] [32mBuilding CXX object CMakeFiles/turtlebot4_node_lib.dir/src/display.cpp.o[0m
+[26.621s] [ 75%] [32m[1mLinking CXX static library libturtlebot4_node_lib.a[0m
+[27.550s] [ 75%] Built target turtlebot4_node_lib
+[27.572s] [ 87%] [32mBuilding CXX object CMakeFiles/turtlebot4_node.dir/src/main.cpp.o[0m
+[32.169s] [100%] [32m[1mLinking CXX executable turtlebot4_node[0m
+[33.645s] [100%] Built target turtlebot4_node
+[33.659s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node' returned '0': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node -- -j12 -l12
+[33.660s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node
+[33.669s] -- Install configuration: ""
+[33.669s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/lib/turtlebot4_node/turtlebot4_node
+[33.691s] -- Set non-toolchain portion of runtime path of "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/lib/turtlebot4_node/turtlebot4_node" to ""
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/display.hpp
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/turtlebot4.hpp
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/action.hpp
+[33.691s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/buttons.hpp
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/utils.hpp
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/leds.hpp
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/include/turtlebot4_node/service.hpp
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/ament_index/resource_index/package_run_dependencies/turtlebot4_node
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/ament_index/resource_index/parent_prefix_path/turtlebot4_node
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/environment/ament_prefix_path.sh
+[33.692s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/environment/ament_prefix_path.dsv
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/environment/path.sh
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/environment/path.dsv
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/local_setup.bash
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/local_setup.sh
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/local_setup.zsh
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/local_setup.dsv
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/package.dsv
+[33.693s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/ament_index/resource_index/packages/turtlebot4_node
+[33.694s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[33.694s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/cmake/turtlebot4_nodeConfig.cmake
+[33.694s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/cmake/turtlebot4_nodeConfig-version.cmake
+[33.694s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_node/share/turtlebot4_node/package.xml
+[33.696s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node' returned '0': AMENT_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_node

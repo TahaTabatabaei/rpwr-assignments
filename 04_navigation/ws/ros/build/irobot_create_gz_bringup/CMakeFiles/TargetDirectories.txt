@@ -1,0 +1,9 @@
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/uninstall.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/irobot_create_gz_bringup_uninstall.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/test.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/edit_cache.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/rebuild_cache.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/list_install_components.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/install.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/install/local.dir
+/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_bringup/CMakeFiles/install/strip.dir

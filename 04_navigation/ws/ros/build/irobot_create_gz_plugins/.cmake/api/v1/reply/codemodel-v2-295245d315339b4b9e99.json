@@ -1,0 +1,117 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-5eb89b433ea804b5c000.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3,
+						4
+					]
+				},
+				{
+					"build" : "Create3Hmi",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-Create3Hmi-1b7d1afb0b7a103ad32f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.2"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Create3Hmi",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "irobot_create_gz_plugins",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Create3Hmi::@4212e76012398fe7fdd8",
+					"jsonFile" : "target-Create3Hmi-73b34a9cba26ab686cdc.json",
+					"name" : "Create3Hmi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Create3Hmi_autogen::@4212e76012398fe7fdd8",
+					"jsonFile" : "target-Create3Hmi_autogen-78874fa9696e016c1de2.json",
+					"name" : "Create3Hmi_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Create3Hmi_autogen_timestamp_deps::@4212e76012398fe7fdd8",
+					"jsonFile" : "target-Create3Hmi_autogen_timestamp_deps-8c2a6a326d1f1daa1f97.json",
+					"name" : "Create3Hmi_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "irobot_create_gz_plugins_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-irobot_create_gz_plugins_uninstall-7cf919a4ff876255e66b.json",
+					"name" : "irobot_create_gz_plugins_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-43d08b46caaa6313edbc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins",
+		"source" : "/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/create3_sim/irobot_create_gz/irobot_create_gz_plugins"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

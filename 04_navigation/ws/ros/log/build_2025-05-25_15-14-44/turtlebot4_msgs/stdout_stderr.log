@@ -1,0 +1,42 @@
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+-- Found PythonExtra: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3  
+-- Found Python3: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (2.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs
+[  1%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[  1%] Built target ament_cmake_python_copy_turtlebot4_msgs
+Traceback (most recent call last):
+  File "/opt/ros/jazzy/lib/rosidl_generator_type_description/rosidl_generator_type_description", line 21, in <module>
+    from rosidl_generator_type_description import generate_type_hash
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_generator_type_description/__init__.py", line 24, in <module>
+    from rosidl_parser.parser import parse_idl_file
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_parser/parser.py", line 20, in <module>
+    from lark import Lark
+ModuleNotFoundError: No module named 'lark'
+gmake[2]: *** [CMakeFiles/turtlebot4_msgs__rosidl_generator_type_description.dir/build.make:79: rosidl_generator_type_description/turtlebot4_msgs/msg/UserLed.json] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:215: CMakeFiles/turtlebot4_msgs__rosidl_generator_type_description.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+running egg_info
+creating turtlebot4_msgs.egg-info
+writing turtlebot4_msgs.egg-info/PKG-INFO
+writing dependency_links to turtlebot4_msgs.egg-info/dependency_links.txt
+writing top-level names to turtlebot4_msgs.egg-info/top_level.txt
+writing manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+reading manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+writing manifest file 'turtlebot4_msgs.egg-info/SOURCES.txt'
+[  1%] Built target ament_cmake_python_build_turtlebot4_msgs_egg
+gmake: *** [Makefile:146: all] Error 2

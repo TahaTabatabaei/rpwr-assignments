@@ -1,0 +1,45 @@
+[0.043s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_msgs -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs
+[0.075s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.306s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.513s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.539s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.715s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.872s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[0.885s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.150s] [31mCMake Error at /opt/ros/jazzy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:57 (message):
+[1.150s]   
+[1.150s]   execute_process(/home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3
+[1.151s]   -m rosidl_adapter --package-name turtlebot4_msgs --arguments-file
+[1.151s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs/rosidl_adapter__arguments__turtlebot4_msgs.json
+[1.151s]   --output-dir
+[1.151s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs/rosidl_adapter/turtlebot4_msgs
+[1.151s]   --output-file
+[1.151s]   /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs/rosidl_adapter/turtlebot4_msgs.idls)
+[1.151s]   returned error code 1:
+[1.151s] 
+[1.151s]   Traceback (most recent call last):
+[1.151s] 
+[1.151s]     File "<frozen runpy>", line 198, in _run_module_as_main
+[1.151s]     File "<frozen runpy>", line 88, in _run_code
+[1.152s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.152s]       sys.exit(main())
+[1.152s]                ^^^^^^
+[1.152s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.152s]       abs_idl_file = convert_to_idl(
+[1.152s]                      ^^^^^^^^^^^^^^^
+[1.152s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/__init__.py", line 18, in convert_to_idl
+[1.152s]       from rosidl_adapter.msg import convert_msg_to_idl
+[1.152s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/msg/__init__.py", line 16, in <module>
+[1.152s]       from rosidl_adapter.resource import expand_template
+[1.152s]     File "/opt/ros/jazzy/lib/python3.12/site-packages/rosidl_adapter/resource/__init__.py", line 19, in <module>
+[1.152s]       import em
+[1.152s] 
+[1.152s]   ModuleNotFoundError: No module named 'em'
+[1.153s] 
+[1.153s] Call Stack (most recent call first):
+[1.153s]   /opt/ros/jazzy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:132 (rosidl_adapt_interfaces)
+[1.153s]   CMakeLists.txt:29 (rosidl_generate_interfaces)
+[1.153s] 
+[1.153s] [0m
+[1.153s] -- Configuring incomplete, errors occurred!
+[1.160s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/turtlebot4_msgs' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/src/turtlebot4/turtlebot4_msgs -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/turtlebot4_msgs

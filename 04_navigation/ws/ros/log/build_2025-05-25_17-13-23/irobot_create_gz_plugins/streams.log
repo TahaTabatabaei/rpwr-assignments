@@ -1,0 +1,24 @@
+[0.038s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins -- -j12 -l12
+[0.108s] [  0%] Built target Create3Hmi_autogen_timestamp_deps
+[0.143s] [ 14%] Built target Create3Hmi_autogen
+[0.205s] [100%] Built target Create3Hmi
+[0.225s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins -- -j12 -l12
+[0.227s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins
+[0.240s] -- Install configuration: ""
+[0.240s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/ament_index/resource_index/package_run_dependencies/irobot_create_gz_plugins
+[0.241s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/ament_index/resource_index/parent_prefix_path/irobot_create_gz_plugins
+[0.241s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/environment/ament_prefix_path.sh
+[0.241s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/environment/ament_prefix_path.dsv
+[0.241s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/environment/path.sh
+[0.241s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/environment/path.dsv
+[0.242s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/local_setup.bash
+[0.242s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/local_setup.sh
+[0.242s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/local_setup.zsh
+[0.242s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/local_setup.dsv
+[0.242s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/package.dsv
+[0.243s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/ament_index/resource_index/packages/irobot_create_gz_plugins
+[0.243s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/cmake/irobot_create_gz_pluginsConfig.cmake
+[0.243s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/cmake/irobot_create_gz_pluginsConfig-version.cmake
+[0.243s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/package.xml
+[0.243s] -- Up-to-date: /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/install/irobot_create_gz_plugins/share/irobot_create_gz_plugins/lib/libCreate3Hmi.so
+[0.255s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/04_navigation/ws/ros/build/irobot_create_gz_plugins

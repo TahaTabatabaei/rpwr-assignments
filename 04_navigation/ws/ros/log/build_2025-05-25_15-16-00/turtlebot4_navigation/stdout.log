@@ -1,0 +1,8 @@
+Built target ament_cmake_python_copy_turtlebot4_navigation
+running egg_info
+writing turtlebot4_navigation.egg-info/PKG-INFO
+writing dependency_links to turtlebot4_navigation.egg-info/dependency_links.txt
+writing top-level names to turtlebot4_navigation.egg-info/top_level.txt
+reading manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+writing manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_turtlebot4_navigation_egg
