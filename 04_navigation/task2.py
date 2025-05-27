@@ -103,8 +103,8 @@ class WallFollower(Node):
     
     def find_wall(self):
         msg = Twist()
-        msg.linear.x = 0.2
-        msg.angular.z = -0.2
+        msg.linear.x = 0.15
+        msg.angular.z = -0.15
         return msg
 
     def turn_left(self):
