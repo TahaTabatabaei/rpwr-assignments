@@ -27,7 +27,7 @@ class ObstacleAvoider(Node):
         self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
 
         # Movement parameters
-        self.forward_speed = 0.1
+        self.forward_speed = 0.15
         self.turn_speed = 0.2
         self.min_distance = 1  # meters
 
@@ -36,7 +36,7 @@ class ObstacleAvoider(Node):
     def scan_callback(self, msg):
 
 
-        # seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
+        # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
         source_frame = msg.header.frame_id
         target_frame = 'base_link'
 
