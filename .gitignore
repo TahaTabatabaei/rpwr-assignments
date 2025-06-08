@@ -3,3 +3,4 @@
 .rpwr_venv
 .vscode
 .idea
+internship/scripts/logs/*

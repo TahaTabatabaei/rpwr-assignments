@@ -11,6 +11,28 @@ from tf_transformations import euler_from_quaternion
 
 import math
 import time
+import sys
+import logging
+
+import os
+from datetime import datetime
+
+# Create logs directory if it doesn't exist
+log_dir = "/home/tahaos/Code/Projects/rpwr-assignments/internship/scripts/logs"
+os.makedirs(log_dir, exist_ok=True)
+
+# Generate filename with current date and time
+now = datetime.now()
+timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
+log_filename = f"keep_lane_{timestamp}.txt  "
+log_filepath = os.path.join(log_dir, log_filename)
+log_file = open(log_filepath, 'w')
+
+# Custom print function that duplicates to log file
+def print_and_log(*args, **kwargs):
+    print(*args, **kwargs)
+    print(*args, **kwargs, file=log_file)
+    log_file.flush()
 
 class WallFollower(Node):
 
@@ -48,8 +70,8 @@ class WallFollower(Node):
             2: 'follow the wall',
             3: 'turn right',
         }
-
-        self.get_logger().info("Wall follower node started")
+        
+        print_and_log("Wall follower node started")
 
     def take_action(self):
         global regions_
@@ -58,9 +80,9 @@ class WallFollower(Node):
         msg = Twist()
         linear_x = 0
         angular_z = 0
-        
+
         global state_description
-        
+
         d_f = self.min_distance_front
         d = self.min_distance_front_side
         d_side = self.min_distance_side
@@ -115,23 +137,22 @@ class WallFollower(Node):
             self.change_state(2)
         else:
             state_description = 'unknown case'
-            self.get_logger().info("unkown case")
+            print_and_log('Unknown case, no action taken')
 
         return
 
     def change_state(self, state):
-        
-        self.get_logger().info(f"{state_description}")
+        # self.get_logger().info(f"{state_description}")
+        print_and_log(f"{state_description}")
         if state is not self.state_:
-            print('Wall follower - [%s] - %s' % (state, self.state_dict_[state]))
-            self.get_logger().info(f"front:{regions_['front']}, fright:{regions_['fright']}, right:{regions_['right']}, fleft:{regions_['fleft']}, left:{regions_['left']}")
-            print(30* '@')
-
+            print_and_log('Wall follower - [%s] - %s' % (state, self.state_dict_[state]))
+            print_and_log(f"front:{regions_['front']}, fright:{regions_['fright']}, right:{regions_['right']}, fleft:{regions_['fleft']}, left:{regions_['left']}")
+            print_and_log(30* '@')
 
             self.state_ = state
-        
+
         return
-    
+
     def find_wall(self):
         msg = Twist()
         msg.linear.x = 0.10
@@ -146,18 +167,17 @@ class WallFollower(Node):
 
     def follow_the_wall(self):
         global regions_
-        
+
         msg = Twist()
         msg.linear.x = 0.2
         msg.angular.z = 0.0
         return msg
-    
+
     def turn_right(self):
         msg = Twist()
         msg.linear.x = 0.0
         msg.angular.z = -0.2
         return msg
-
 
     def scan_callback(self, msg):
 
@@ -258,27 +278,34 @@ class WallFollower(Node):
             elif self.state_ == 3:
                 twist = self.turn_right()
             else:
-                self.get_logger().warn(f"Unknown state: {self.state_}. No action taken.")
-            
-            
+                print_and_log(f"Unknown state: {self.state_}. No action taken.")
+
             self.cmd_pub.publish(twist)
 
-
-            
-            
-            
+   
         else:
             self.get_logger().warn(f"Cannot transform from {source_frame} to {target_frame}. Waiting for transform...")
+
+
 def main(args=None):
     try:
+
+
         rclpy.init(args=args)
         node = WallFollower()
+
+        logger = logging.getLogger("rclpy")
+        handler = logging.StreamHandler(log_filepath)
+        logger.addHandler(handler)
+
         rclpy.spin(node)
-    except KeyboardInterrupt:
+
+    except (KeyboardInterrupt, Exception) as e:
         node.get_logger().info("Wall follower node stopped by user")
     finally:
         node.destroy_node()
         rclpy.shutdown()
+        log_filepath.close()
 
 if __name__ == '__main__':
     main()
