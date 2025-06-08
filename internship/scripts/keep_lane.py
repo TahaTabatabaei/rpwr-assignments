@@ -18,7 +18,7 @@ import os
 from datetime import datetime
 
 # Create logs directory if it doesn't exist
-log_dir = "/home/tahaos/Code/Projects/rpwr-assignments/internship/scripts/logs"
+log_dir = "internship/scripts/logs"
 os.makedirs(log_dir, exist_ok=True)
 
 # Generate filename with current date and time
