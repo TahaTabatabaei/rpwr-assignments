@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, TwistStamped
 
 from tf2_ros.buffer import Buffer
 from tf2_ros.transform_listener import TransformListener
@@ -48,6 +48,11 @@ class WallFollower(Node):
 
         # Subscriber to scan data
         self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+
+        # Subscriber to controller commands
+        self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
+
+        self.last_msg = TwistStamped()
 
         # Movement parameters
         # self.forward_speed = 0.1
@@ -98,11 +103,13 @@ class WallFollower(Node):
         elif regions['right'] < d_side and regions['front'] > d and regions['fright'] > d:
             # Wall on the right side, but nothing on the front and fright, so turn right to find the wall again
             state_description = 'case 2 - right'
-            self.change_state(3)
+            # self.change_state(3)
+            self.change_state(2)
         elif regions['left'] < d_side and regions['front'] > d and regions['fleft'] > d:
             # Wall on the left side, but nothing on the front and fleft, so turn left to find the wall again
             state_description = 'case 3 - left'
-            self.change_state(1)
+            # self.change_state(1)
+            self.change_state(2)
         elif regions['front'] > d and regions['fleft'] > d and regions['fright'] > d and regions['right'] > d_side and regions['left'] > d_side:
             # No wall in front, left, right, fleft, fright, so nothing to do. just go forward 
             state_description = 'case 4 - nothing'
@@ -155,7 +162,7 @@ class WallFollower(Node):
 
     def find_wall(self):
         msg = Twist()
-        msg.linear.x = 0.10
+        msg.linear.x = 0.0
         msg.angular.z = 0.0
         return msg
 
@@ -169,7 +176,7 @@ class WallFollower(Node):
         global regions_
 
         msg = Twist()
-        msg.linear.x = 0.2
+        msg.linear.x = 0.0
         msg.angular.z = 0.0
         return msg
 
@@ -270,10 +277,12 @@ class WallFollower(Node):
 
 
             if self.state_ == 0:
+                return
                 twist = self.find_wall()
             elif self.state_ == 1:
                 twist = self.turn_left()
             elif self.state_ == 2:
+                return
                 twist = self.follow_the_wall()  
             elif self.state_ == 3:
                 twist = self.turn_right()
@@ -286,12 +295,22 @@ class WallFollower(Node):
         else:
             self.get_logger().warn(f"Cannot transform from {source_frame} to {target_frame}. Waiting for transform...")
 
+    def ps3_callback(self, msg: TwistStamped):
+        self.last_msg = msg
+        print_and_log(f"Received PS3 command: linear.x={self.last_msg.twist.linear.x}, angular.z={self.last_msg.twist.angular.z}")
 
-def main(args=None):
+        msg = Twist()
+        msg.linear.x = self.last_msg.twist.linear.x
+        msg.angular.z = self.last_msg.twist.angular.z
+        
+        self.cmd_pub.publish(msg)
+
+
+
+def main():
+
     try:
-
-
-        rclpy.init(args=args)
+        rclpy.init()
         node = WallFollower()
 
         logger = logging.getLogger("rclpy")
