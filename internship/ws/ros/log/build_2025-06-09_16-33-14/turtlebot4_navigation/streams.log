@@ -1,0 +1,86 @@
+[0.028s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/src/turtlebot4/turtlebot4_navigation -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation
+[0.099s] -- The C compiler identification is GNU 13.3.0
+[0.168s] -- The CXX compiler identification is GNU 13.3.0
+[0.191s] -- Detecting C compiler ABI info
+[0.300s] -- Detecting C compiler ABI info - done
+[0.313s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.314s] -- Detecting C compile features
+[0.315s] -- Detecting C compile features - done
+[0.329s] -- Detecting CXX compiler ABI info
+[0.461s] -- Detecting CXX compiler ABI info - done
+[0.482s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.482s] -- Detecting CXX compile features
+[0.486s] -- Detecting CXX compile features - done
+[0.507s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.691s] -- Found Python3: /home/tahaos/Code/Projects/rpwr-assignments/.rpwr_venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.082s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.324s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.329s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.329s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.330s] -- Added test 'lint_cmake' to check CMake code style
+[1.332s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.334s] -- Added test 'xmllint' to check XML markup files
+[1.337s] -- Configuring done (1.3s)
+[1.343s] -- Generating done (0.0s)
+[1.345s] -- Build files have been written to: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation
+[1.351s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/src/turtlebot4/turtlebot4_navigation -DCMAKE_INSTALL_PREFIX=/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation
+[1.353s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation -- -j12 -l12
+[1.432s] Built target ament_cmake_python_copy_turtlebot4_navigation
+[1.704s] running egg_info
+[1.729s] creating turtlebot4_navigation.egg-info
+[1.729s] writing turtlebot4_navigation.egg-info/PKG-INFO
+[1.729s] writing dependency_links to turtlebot4_navigation.egg-info/dependency_links.txt
+[1.730s] writing top-level names to turtlebot4_navigation.egg-info/top_level.txt
+[1.730s] writing manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+[1.807s] reading manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+[1.808s] writing manifest file 'turtlebot4_navigation.egg-info/SOURCES.txt'
+[1.849s] Built target ament_cmake_python_build_turtlebot4_navigation_egg
+[1.863s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --build /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation -- -j12 -l12
+[1.864s] Invoking command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation
+[1.875s] -- Install configuration: ""
+[1.875s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/config
+[1.875s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/config/nav2.yaml
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/config/localization.yaml
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/config/slam.yaml
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/launch
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/launch/nav2.launch.py
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/launch/localization.launch.py
+[1.876s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/launch/slam.launch.py
+[1.877s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps
+[1.877s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/maze.yaml
+[1.877s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/warehouse.pgm
+[1.877s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/depot.pgm
+[1.878s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/warehouse.yaml
+[1.878s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/depot.yaml
+[1.878s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/maps/maze.pgm
+[1.879s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/pythonpath.sh
+[1.879s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/pythonpath.dsv
+[1.879s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation-2.0.1-py3.12.egg-info
+[1.879s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation-2.0.1-py3.12.egg-info/dependency_links.txt
+[1.879s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation-2.0.1-py3.12.egg-info/top_level.txt
+[1.880s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation-2.0.1-py3.12.egg-info/PKG-INFO
+[1.880s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation-2.0.1-py3.12.egg-info/SOURCES.txt
+[1.880s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation
+[1.880s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation/turtlebot4_navigator.py
+[1.880s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation/__init__.py
+[1.923s] Listing '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation'...
+[1.923s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation/__init__.py'...
+[1.923s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigation/turtlebot4_navigator.py'...
+[1.929s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigator.py
+[1.983s] Compiling '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/lib/python3.12/site-packages/turtlebot4_navigator.py'...
+[1.995s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/ament_index/resource_index/package_run_dependencies/turtlebot4_navigation
+[1.995s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/ament_index/resource_index/parent_prefix_path/turtlebot4_navigation
+[1.995s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/ament_prefix_path.sh
+[1.996s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/ament_prefix_path.dsv
+[1.996s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/path.sh
+[1.996s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/environment/path.dsv
+[1.996s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/local_setup.bash
+[1.997s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/local_setup.sh
+[1.997s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/local_setup.zsh
+[1.997s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/local_setup.dsv
+[1.997s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/package.dsv
+[1.998s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/ament_index/resource_index/packages/turtlebot4_navigation
+[1.998s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/cmake/turtlebot4_navigationConfig.cmake
+[1.998s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/cmake/turtlebot4_navigationConfig-version.cmake
+[1.998s] -- Installing: /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/install/turtlebot4_navigation/share/turtlebot4_navigation/package.xml
+[2.001s] Invoked command in '/home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy PS1=(.rpwr_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.rpwr_venv) /usr/bin/cmake --install /home/tahaos/Code/Projects/rpwr-assignments/internship/ws/ros/build/turtlebot4_navigation
