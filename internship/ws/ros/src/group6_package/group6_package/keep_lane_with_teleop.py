@@ -42,25 +42,35 @@ class WallFollower(Node):
         # to handle transformations
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self, qos=10)
-
-        # Subscriber to scan data
-        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
-
-        # Subscriber to controller commands
-        self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
         
         topic_list = self.get_topic_names_and_types()
         
-        if '/ps/cmd_vel' in topic_list: # publish to /base/cmd_vel for real robot
+        if '/ps3/cmd_vel' in topic_list: # publish to /base/cmd_vel for real robot and subscribe to throttled topics
             self.cmd_pub = self.create_publisher(Twist, '/base/cmd_vel', 10)
             print_and_log("Found real robot...")
+
+            # Subscriber to scan_throttle data
+            self.scan_sub = self.create_subscription(LaserScan, '/scan_throttle', self.scan_callback, 10)
+
+            # Subscriber to throttled controller commands
+            self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel_throttle', self.ps3_callback, qos_profile=10)
 
         else:
             # Publisher to cmd_vel_unstamped
             self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
             print_and_log('Found simulation robot...')
 
+            # Subscriber to scan data
+            self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+
+            # Subscriber to controller commands
+            self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
+        
         self.last_msg = TwistStamped()
+
+        # self.throttle_period_sec = 0.1  # 10 Hz => 0.1 second
+        # self.last_time_scan = self.get_clock().now()
+        # self.last_time_ps3 = self.get_clock().now
 
         # Movement parameters
         # self.forward_speed = 0.1
@@ -195,7 +205,14 @@ class WallFollower(Node):
         return msg
 
     def scan_callback(self, msg):
+        # now = self.get_clock().now()
+        # elapsed = now - self.last_time_scan  # This is a Duration object
+        # elapsed_sec = elapsed.nanoseconds / 1e9
 
+        # if elapsed_sec >= (elapsed.nanoseconds / 1e9):
+        #     self.last_time_scan = now
+        #     self.get_logger().info('Processing message at 10 Hz')
+            
         # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
         source_frame = msg.header.frame_id
         target_frame = 'base_link'
@@ -211,9 +228,9 @@ class WallFollower(Node):
 
             roll, pitch, yaw = euler_from_quaternion(
                 [t.transform.rotation.x,
-                 t.transform.rotation.y,
-                 t.transform.rotation.z,
-                 t.transform.rotation.w]
+                t.transform.rotation.y,
+                t.transform.rotation.z,
+                t.transform.rotation.w]
             )
             angle_between_frames = math.degrees(yaw)
 
@@ -299,7 +316,6 @@ class WallFollower(Node):
 
             self.cmd_pub.publish(twist)
 
-   
         else:
             self.get_logger().warn(f"Cannot transform from {source_frame} to {target_frame}. Waiting for transform...")
 

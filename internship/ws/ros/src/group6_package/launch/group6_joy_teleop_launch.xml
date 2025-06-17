@@ -22,4 +22,25 @@
     <remap from="/cmd_vel" to="/ps3/cmd_vel"/>
 
   </node>
+
+    <!-- Throttle laser frequency to 10 Hz -->
+  <node pkg="topic_tools" exec="throttle" name="scan_throttle">
+    <param name="throttle_type" value="messages"/>
+    <param name="rate" value="10.0"/>
+    <param name="input_topic" value="/scan"/>
+    <param name="output_topic" value="/scan_throttle"/>
+    <param name="output_message_type" value="sensor_msgs/msg/LaserScan"/>
+  </node>
+
+  <launch>
+  <!-- Throttle /cmd_vel (TwistStamped) to 10 Hz -->
+  <node pkg="topic_tools" exec="throttle" name="cmd_vel_throttle">
+    <param name="throttle_type" value="messages"/>
+    <param name="rate" value="10.0"/>  <!-- 10 Hz -->
+    <param name="input_topic" value="/cmd_vel"/>
+    <param name="output_topic" value="/cmd_vel_throttled"/>
+    <param name="output_message_type" value="geometry_msgs/msg/TwistStamped"/>
+  </node>
+</launch>
+
 </launch>

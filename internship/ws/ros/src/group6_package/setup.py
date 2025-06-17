@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'my_node = group6_package.my_node:main'
+            'my_node = group6_package.my_node:main',
+            'keep_lane_with_teleop = group6_package.keep_lane_with_teleop:main'  
         ],
     },
 )
