@@ -43,14 +43,22 @@ class WallFollower(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self, qos=10)
 
-        # Publisher to cmd_vel_unstamped
-        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) # publish to /base/cmd_vel for real robot
-
         # Subscriber to scan data
         self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
 
         # Subscriber to controller commands
         self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
+        
+        topic_list = self.get_topic_names_and_types()
+        
+        if '/ps/cmd_vel' in topic_list: # publish to /base/cmd_vel for real robot
+            self.cmd_pub = self.create_publisher(Twist, '/base/cmd_vel', 10)
+            print_and_log("Found real robot...")
+
+        else:
+            # Publisher to cmd_vel_unstamped
+            self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
+            print_and_log('Found simulation robot...')
 
         self.last_msg = TwistStamped()
 
