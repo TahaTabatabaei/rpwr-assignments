@@ -14,8 +14,8 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='tahaos',
-    maintainer_email='sied.taha@gmail.com',
-    description='TODO: Package description',
+    maintainer_email='tabatabaei@uni-bremen.de',
+    description='A package for the final project of the course RPWR',
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
