@@ -62,9 +62,9 @@ class WallFollower(Node):
         # Movement parameters
         # self.forward_speed = 0.1
         # self.turn_speed = 0.4
-        self.min_distance_front = 0.45  # meters
-        self.min_distance_front_side = 0.5  # meters
-        self.min_distance_side = 0.6  # meters
+        self.min_distance_front = 0.8  # meters
+        self.min_distance_front_side = 0.9  # meters
+        self.min_distance_side = 1  # meters
 
         regions_ = {
             'right': 0,
@@ -192,13 +192,6 @@ class WallFollower(Node):
         return msg
 
     def scan_callback(self, msg):
-        # now = self.get_clock().now()
-        # elapsed = now - self.last_time_scan  # This is a Duration object
-        # elapsed_sec = elapsed.nanoseconds / 1e9
-
-        # if elapsed_sec >= (elapsed.nanoseconds / 1e9):
-        #     self.last_time_scan = now
-        #     self.get_logger().info('Processing message at 10 Hz')
             
         # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
         source_frame = msg.header.frame_id
