@@ -10,7 +10,11 @@ from tf2_ros.transform_listener import TransformListener
 from tf_transformations import euler_from_quaternion
 
 import math
+import time
+import sys
 import logging
+
+import traceback
 
 import os
 from datetime import datetime
@@ -41,37 +45,17 @@ class WallFollower(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self, qos=10)
         
-        topic_list = self.get_topic_names_and_types()
-        self.robot_is_ok = False
+        # Publisher to cmd_vel_unstamped
+        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
 
-        for i in range(len(topic_list)):
+        # Subscriber to scan data
+        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
 
-            if '/ps3/cmd_vel' in topic_list[i]: # publish to /base/cmd_vel for real robot and subscribe to throttled topics
-                # Publisher to /base/cmd_vel
-                self.cmd_pub = self.create_publisher(Twist, '/base/cmd_vel', 10)
-
-                # Subscriber to scan_throttle data
-                self.scan_sub = self.create_subscription(LaserScan, '/scan_throttle', self.scan_callback, 10)
-
-                # Subscriber to throttled controller commands
-                self.ps3_sub = self.create_subscription(Twist, '/ps3/cmd_vel_throttled"', self.ps3_callback, qos_profile=10)
-                
-                print_and_log("Found real robot...")
-                self.robot_is_ok = True
-                break
-
-        # else:
-            # # Publisher to cmd_vel_unstamped
-            # self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
-            # print_and_log('Found simulation robot...')
-
-            # # Subscriber to scan data
-            # self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
-
-            # # Subscriber to controller commands
-            # self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
+        # Subscriber to controller commands
+        self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
+        print_and_log('Found simulation robot...')
         
-        self.last_msg = Twist()
+        self.last_msg = TwistStamped()
 
         # self.throttle_period_sec = 0.1  # 10 Hz => 0.1 second
         # self.last_time_scan = self.get_clock().now()
@@ -210,75 +194,79 @@ class WallFollower(Node):
         return msg
 
     def scan_callback(self, msg):
+        # now = self.get_clock().now()
+        # elapsed = now - self.last_time_scan  # This is a Duration object
+        # elapsed_sec = elapsed.nanoseconds / 1e9
+
+        # if elapsed_sec >= (elapsed.nanoseconds / 1e9):
+        #     self.last_time_scan = now
+        #     self.get_logger().info('Processing message at 10 Hz')
             
         # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
-        source_frame = msg.header.frame_id
-        target_frame = 'base_link'  # a potential issue --> check in rviz fixed frames if the real robot has this frame or not
+        # source_frame = msg.header.frame_id
+        # target_frame = 'base_link'
 
-        if self.tf_buffer.can_transform(target_frame, source_frame, rclpy.time.Time()):
+        if True:
 
-            t = self.tf_buffer.lookup_transform(
-                target_frame,
-                source_frame,
-                rclpy.time.Time(),
-                timeout=rclpy.duration.Duration(seconds=1.0)
-            )
+            # t = self.tf_buffer.lookup_transform(
+            #     target_frame,
+            #     source_frame,
+            #     rclpy.time.Time(),
+            #     timeout=rclpy.duration.Duration(seconds=1.0)
+            # )
 
-            roll, pitch, yaw = euler_from_quaternion(
-                [t.transform.rotation.x,
-                t.transform.rotation.y,
-                t.transform.rotation.z,
-                t.transform.rotation.w]
-            )
-            angle_between_frames = math.degrees(yaw)
+            # roll, pitch, yaw = euler_from_quaternion(
+            #     [t.transform.rotation.x,
+            #     t.transform.rotation.y,
+            #     t.transform.rotation.z,
+            #     t.transform.rotation.w]
+            # )
+            # angle_between_frames = math.degrees(yaw)
 
 
             # print(f"Angle difference between lidar and base_link (in degree): {angle_between_frames}")
 
             step = math.degrees(msg.angle_increment)
-
+            # print(f'degree step = {step}')
+            stepx = 4
             # Get the index of the front direction in the scan data
-            front_index = int(int((0.0 - msg.angle_min) / msg.angle_increment) - int(angle_between_frames / step))
+            # print(f'len ranges')
+            front_index = int((0.0 - msg.angle_min) / msg.angle_increment)
             # print(f"Front index: {front_index}")
 
-            min_front_index = front_index - 64
-            max_front_index = front_index + 64
+            # print(f'len ranges = {len(msg.ranges)}')
+
+            min_front_index = front_index - 32*stepx
+            max_front_index = front_index + 32*stepx
 
             front_ranges = msg.ranges[min_front_index:max_front_index]
 
-            right_front_index = front_index - 128
-            min_right_front_index = right_front_index - 64
-            max_right_front_index = right_front_index + 64
+            right_front_index = front_index - 64*stepx
+            min_right_front_index = right_front_index - 32*stepx
+            max_right_front_index = right_front_index + 32*stepx
 
-            if min_right_front_index < 0:
-                min_front_index += len(msg.ranges)
+            f_right_ranges = msg.ranges[min_right_front_index:max_right_front_index]
 
-                f_right_ranges = msg.ranges[min_right_front_index:]
-                f_right_ranges.extend(msg.ranges[:max_right_front_index])
+            right_index = right_front_index - 206
 
-            right_index = right_front_index - 128
-
-            if right_index < 0:
-                right_index += len(msg.ranges)
-            
-            min_right_index = right_index - 64
-            max_right_index = right_index + 64
+            min_right_index = 0
+            max_right_index = (156-1)
 
             right_ranges = msg.ranges[min_right_index:max_right_index]
 
 
-            left_front_index = front_index + 128
+            left_front_index = front_index + 64*stepx
 
-            min_left_front_index = left_front_index - 64
-            max_left_front_index = left_front_index + 64
+            min_left_front_index = left_front_index - 32*stepx
+            max_left_front_index = left_front_index + 32*stepx
 
             left_front_ranges = msg.ranges[min_left_front_index:max_left_front_index]
 
 
-            left_index = left_front_index + 128
+            left_index = left_front_index + 206
 
-            min_left_index = left_index - 64
-            max_left_index = left_index + 64
+            min_left_index = (924+1)
+            max_left_index = 1080
 
             left_ranges = msg.ranges[min_left_index:max_left_index]
             
@@ -335,18 +323,15 @@ def main():
         rclpy.init()
         node = WallFollower()
 
-        if node.robot_is_ok:
-            logger = logging.getLogger("rclpy")
-            handler = logging.StreamHandler(log_filepath)
-            logger.addHandler(handler)
+        logger = logging.getLogger("rclpy")
+        handler = logging.StreamHandler(log_filepath)
+        logger.addHandler(handler)
 
-            rclpy.spin(node)
-        else:
-            print_and_log("Could not find the real robot...")
-
+        rclpy.spin(node)
 
     except (KeyboardInterrupt, Exception) as e:
         node.get_logger().info("Wall follower node stopped by user")
+        print(traceback.print_stack(e))
     finally:
         node.destroy_node()
         rclpy.shutdown()
