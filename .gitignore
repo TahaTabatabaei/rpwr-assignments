@@ -6,6 +6,10 @@
 **/internship/scripts/logs/*
 **/internship/ws/ros/build
 **/internship/ws/ros/install
-**internship/ws/ros/log
+*internship/ws/ros/log*
 internship/ws/ros/log
 internship/ws/ros/log/latest_build/*
+rosbag*
+*.zip
+*logs_group6*
+internship/ws/ros/log/latest_build
