@@ -20,6 +20,8 @@ in a new terminal, run each of them like this:
 
 - There are 2 demo videos. You may watch them to see our results.
 
+- You can find the map for the task 3 in the `04_navigation/maps` folder.
+
 
 ## notes for teammates
 - To install all the dependencies, it is advised to run this command in your workspace root:

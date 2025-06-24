@@ -14,6 +14,8 @@ import time
 import sys
 import logging
 
+import traceback
+
 import os
 from datetime import datetime
 
@@ -192,75 +194,79 @@ class WallFollower(Node):
         return msg
 
     def scan_callback(self, msg):
+        # now = self.get_clock().now()
+        # elapsed = now - self.last_time_scan  # This is a Duration object
+        # elapsed_sec = elapsed.nanoseconds / 1e9
+
+        # if elapsed_sec >= (elapsed.nanoseconds / 1e9):
+        #     self.last_time_scan = now
+        #     self.get_logger().info('Processing message at 10 Hz')
             
         # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
-        source_frame = msg.header.frame_id
-        target_frame = 'base_link'
+        # source_frame = msg.header.frame_id
+        # target_frame = 'base_link'
 
-        if self.tf_buffer.can_transform(target_frame, source_frame, rclpy.time.Time()):
+        if True:
 
-            t = self.tf_buffer.lookup_transform(
-                target_frame,
-                source_frame,
-                rclpy.time.Time(),
-                timeout=rclpy.duration.Duration(seconds=1.0)
-            )
+            # t = self.tf_buffer.lookup_transform(
+            #     target_frame,
+            #     source_frame,
+            #     rclpy.time.Time(),
+            #     timeout=rclpy.duration.Duration(seconds=1.0)
+            # )
 
-            roll, pitch, yaw = euler_from_quaternion(
-                [t.transform.rotation.x,
-                t.transform.rotation.y,
-                t.transform.rotation.z,
-                t.transform.rotation.w]
-            )
-            angle_between_frames = math.degrees(yaw)
+            # roll, pitch, yaw = euler_from_quaternion(
+            #     [t.transform.rotation.x,
+            #     t.transform.rotation.y,
+            #     t.transform.rotation.z,
+            #     t.transform.rotation.w]
+            # )
+            # angle_between_frames = math.degrees(yaw)
 
 
             # print(f"Angle difference between lidar and base_link (in degree): {angle_between_frames}")
 
             step = math.degrees(msg.angle_increment)
-
+            # print(f'degree step = {step}')
+            stepx = 4
             # Get the index of the front direction in the scan data
-            front_index = int(int((0.0 - msg.angle_min) / msg.angle_increment) - int(angle_between_frames / step))
+            # print(f'len ranges')
+            front_index = int((0.0 - msg.angle_min) / msg.angle_increment)
             # print(f"Front index: {front_index}")
 
-            min_front_index = front_index - 64
-            max_front_index = front_index + 64
+            # print(f'len ranges = {len(msg.ranges)}')
+
+            min_front_index = front_index - 32*stepx
+            max_front_index = front_index + 32*stepx
 
             front_ranges = msg.ranges[min_front_index:max_front_index]
 
-            right_front_index = front_index - 128
-            min_right_front_index = right_front_index - 64
-            max_right_front_index = right_front_index + 64
+            right_front_index = front_index - 64*stepx
+            min_right_front_index = right_front_index - 32*stepx
+            max_right_front_index = right_front_index + 32*stepx
 
-            if min_right_front_index < 0:
-                min_front_index += len(msg.ranges)
+            f_right_ranges = msg.ranges[min_right_front_index:max_right_front_index]
 
-                f_right_ranges = msg.ranges[min_right_front_index:]
-                f_right_ranges.extend(msg.ranges[:max_right_front_index])
+            right_index = right_front_index - 206
 
-            right_index = right_front_index - 128
-
-            if right_index < 0:
-                right_index += len(msg.ranges)
-            
-            min_right_index = right_index - 64
-            max_right_index = right_index + 64
+            min_right_index = 0
+            max_right_index = (156-1)
 
             right_ranges = msg.ranges[min_right_index:max_right_index]
 
 
-            left_front_index = front_index + 128
+            left_front_index = front_index + 64*stepx
 
-            min_left_front_index = left_front_index - 64
-            max_left_front_index = left_front_index + 64
+            min_left_front_index = left_front_index - 32*stepx
+            max_left_front_index = left_front_index + 32*stepx
 
             left_front_ranges = msg.ranges[min_left_front_index:max_left_front_index]
 
 
-            left_index = left_front_index + 128
+            left_index = left_front_index + 206
 
-            min_left_index = left_index - 64
-            max_left_index = left_index + 64
+            min_left_index = (924+1)
+            max_left_index = 1080
 
             left_ranges = msg.ranges[min_left_index:max_left_index]
             
@@ -325,6 +331,7 @@ def main():
 
     except (KeyboardInterrupt, Exception) as e:
         node.get_logger().info("Wall follower node stopped by user")
+        print(traceback.print_stack(e))
     finally:
         node.destroy_node()
         rclpy.shutdown()

@@ -10,8 +10,6 @@ from tf2_ros.transform_listener import TransformListener
 from tf_transformations import euler_from_quaternion
 
 import math
-import time
-import sys
 import logging
 
 import os
@@ -43,17 +41,37 @@ class WallFollower(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self, qos=10)
         
-        # Publisher to cmd_vel_unstamped
-        self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
+        topic_list = self.get_topic_names_and_types()
+        self.robot_is_ok = False
 
-        # Subscriber to scan data
-        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+        for i in range(len(topic_list)):
 
-        # Subscriber to controller commands
-        self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
-        print_and_log('Found simulation robot...')
+            if '/ps3/cmd_vel' in topic_list[i]: # publish to /base/cmd_vel for real robot and subscribe to throttled topics
+                # Publisher to /base/cmd_vel
+                self.cmd_pub = self.create_publisher(Twist, '/base/cmd_vel', 10)
+
+                # Subscriber to scan_throttle data
+                self.scan_sub = self.create_subscription(LaserScan, '/scan_throttle', self.scan_callback, 10)
+
+                # Subscriber to throttled controller commands
+                self.ps3_sub = self.create_subscription(Twist, '/ps3/cmd_vel_throttled"', self.ps3_callback, qos_profile=10)
+                
+                print_and_log("Found real robot...")
+                self.robot_is_ok = True
+                break
+
+        # else:
+            # # Publisher to cmd_vel_unstamped
+            # self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
+            # print_and_log('Found simulation robot...')
+
+            # # Subscriber to scan data
+            # self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+
+            # # Subscriber to controller commands
+            # self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
         
-        self.last_msg = TwistStamped()
+        self.last_msg = Twist()
 
         # self.throttle_period_sec = 0.1  # 10 Hz => 0.1 second
         # self.last_time_scan = self.get_clock().now()
@@ -195,7 +213,7 @@ class WallFollower(Node):
             
         # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
         source_frame = msg.header.frame_id
-        target_frame = 'base_link'
+        target_frame = 'base_link'  # a potential issue --> check in rviz fixed frames if the real robot has this frame or not
 
         if self.tf_buffer.can_transform(target_frame, source_frame, rclpy.time.Time()):
 
@@ -317,11 +335,15 @@ def main():
         rclpy.init()
         node = WallFollower()
 
-        logger = logging.getLogger("rclpy")
-        handler = logging.StreamHandler(log_filepath)
-        logger.addHandler(handler)
+        if node.robot_is_ok:
+            logger = logging.getLogger("rclpy")
+            handler = logging.StreamHandler(log_filepath)
+            logger.addHandler(handler)
 
-        rclpy.spin(node)
+            rclpy.spin(node)
+        else:
+            print_and_log("Could not find the real robot...")
+
 
     except (KeyboardInterrupt, Exception) as e:
         node.get_logger().info("Wall follower node stopped by user")
