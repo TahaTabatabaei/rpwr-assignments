@@ -19,6 +19,8 @@ import traceback
 import os
 from datetime import datetime
 
+# TODO: define parameters
+
 # Create logs directory if it doesn't exist
 log_dir = "internship/scripts/logs_group6"
 os.makedirs(log_dir, exist_ok=True)
@@ -49,7 +51,7 @@ class WallFollower(Node):
         self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
 
         # Subscriber to scan data
-        self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
+        self.scan_sub = self.create_subscription(LaserScan, '/scan_filtered', self.scan_callback, 10)
 
         # Subscriber to controller commands
         self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
@@ -69,11 +71,11 @@ class WallFollower(Node):
         self.min_distance_side = 1  # meters
 
         regions_ = {
-            'right': 0,
-            'fright': 0,
-            'front': 0,
-            'fleft': 0,
-            'left': 0,
+            'right': 0.0,
+            'fright': 0.0,
+            'front': 0.0,
+            'fleft': 0.0,
+            'left': 0.0,
         }
         self.state_ = 0
         self.state_dict_ = {
@@ -194,6 +196,18 @@ class WallFollower(Node):
         return msg
 
     def scan_callback(self, msg):
+        # valid_ranges = []
+        # for r in msg.ranges:
+        #     if (r < 0.17):
+        #         valid_ranges.append(10.0)
+        #     elif (r > 5.0):
+        #         valid_ranges.append(5.0)
+        #     else:
+        #         valid_ranges.append(r)
+
+        valid_ranges = msg.ranges
+        print(len(msg.ranges))
+
         # now = self.get_clock().now()
         # elapsed = now - self.last_time_scan  # This is a Duration object
         # elapsed_sec = elapsed.nanoseconds / 1e9
@@ -228,57 +242,74 @@ class WallFollower(Node):
 
             step = math.degrees(msg.angle_increment)
             # print(f'degree step = {step}')
-            stepx = 4
+            stepx = (1/step)
+            print(f'stepx = {stepx}')
             # Get the index of the front direction in the scan data
             # print(f'len ranges')
             front_index = int((0.0 - msg.angle_min) / msg.angle_increment)
-            # print(f"Front index: {front_index}")
+            print(f"Front index: {front_index}")
 
             # print(f'len ranges = {len(msg.ranges)}')
 
-            min_front_index = front_index - 32*stepx
-            max_front_index = front_index + 32*stepx
+            min_front_index = front_index - int(32*stepx)
+            print(min_front_index)
+            max_front_index = front_index + int(32*stepx)
+            print(max_front_index)
 
-            front_ranges = msg.ranges[min_front_index:max_front_index]
+            front_ranges = valid_ranges[min_front_index:max_front_index]
 
-            right_front_index = front_index - 64*stepx
-            min_right_front_index = right_front_index - 32*stepx
-            max_right_front_index = right_front_index + 32*stepx
+            right_front_index = front_index - int(64*stepx)
+            print(right_front_index)
+            min_right_front_index = right_front_index - int(32*stepx)
+            print(min_right_front_index)
+            max_right_front_index = right_front_index + int(32*stepx)
+            print(max_right_front_index)
 
-            f_right_ranges = msg.ranges[min_right_front_index:max_right_front_index]
+            f_right_ranges = valid_ranges[min_right_front_index:max_right_front_index]
 
-            right_index = right_front_index - 206
 
+            max_right_index = min_right_front_index-1
+            print(max_right_index)
             min_right_index = 0
-            max_right_index = (156-1)
+            print(min_right_index)
 
-            right_ranges = msg.ranges[min_right_index:max_right_index]
-
-
-            left_front_index = front_index + 64*stepx
-
-            min_left_front_index = left_front_index - 32*stepx
-            max_left_front_index = left_front_index + 32*stepx
-
-            left_front_ranges = msg.ranges[min_left_front_index:max_left_front_index]
+            right_ranges = valid_ranges[min_right_index:max_right_index]
 
 
-            left_index = left_front_index + 206
+            left_front_index = front_index + int(64*stepx)
+            print(left_front_index)
+            min_left_front_index = left_front_index - int(32*stepx)
+            print(min_left_front_index)
+            max_left_front_index = left_front_index + int(32*stepx)
+            print(max_left_front_index)
 
-            min_left_index = (924+1)
-            max_left_index = 1080
+            left_front_ranges = valid_ranges[min_left_front_index:max_left_front_index]
 
-            left_ranges = msg.ranges[min_left_index:max_left_index]
+
+            min_left_index = max_left_front_index+1
+            print(min_left_index)
+            max_left_index = len(valid_ranges)-1
+            print(max_left_index)
+
+            left_ranges = valid_ranges[min_left_index:max_left_index]
             
             # print(f"right: {right_index}, fright: {right_front_index}, front: {front_index}, fleft: {left_front_index}, left: {left_index}")
 
             global regions_
+            # regions_ = {
+            # 'right':  min(min(right_ranges), 10),
+            # 'fright': min(min(f_right_ranges), 10),
+            # 'front':  min(min(front_ranges), 10),
+            # 'fleft':  min(min(left_front_ranges), 10),
+            # 'left':   min(min(left_ranges), 10),
+            # }
+
             regions_ = {
-            'right':  min(min(right_ranges), 10),
-            'fright': min(min(f_right_ranges), 10),
-            'front':  min(min(front_ranges), 10),
-            'fleft':  min(min(left_front_ranges), 10),
-            'left':   min(min(left_ranges), 10),
+            'right':  min(right_ranges),
+            'fright': min(f_right_ranges),
+            'front':  min(front_ranges),
+            'fleft':  min(left_front_ranges),
+            'left':   min(left_ranges),
             }
 
 
