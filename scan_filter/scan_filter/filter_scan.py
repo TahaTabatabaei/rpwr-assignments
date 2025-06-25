@@ -2,6 +2,7 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.duration import Duration
 from sensor_msgs.msg import LaserScan
 import numpy as np
 import math
@@ -20,9 +21,8 @@ class ScanFilterNode(Node):
         self.declare_parameter('filter_intensity', False)
         self.declare_parameter('outlier_threshold', 0.3)
         self.declare_parameter('outlier_window_size', 5)
-        # NEW: Blind spot parameter
-        # Expects a list of lists, e.g., [[-15.0, -5.0], [5.0, 15.0]] in degrees
-        self.declare_parameter('blind_spot_angles', [])#-26 26
+        self.declare_parameter('blind_spot_angles', [-15.0, -5.0, 5.0, 15.0])  # flat list
+        self.declare_parameter('output_rate_limit', 0.0)  # Hz, 0.0 means unlimited
 
         # --- Get Parameters ---
         self.group_size = self.get_parameter('group_size').value
@@ -32,13 +32,21 @@ class ScanFilterNode(Node):
         self.filter_intensity = self.get_parameter('filter_intensity').value
         self.outlier_threshold = self.get_parameter('outlier_threshold').value
         self.outlier_window_size = self.get_parameter('outlier_window_size').value
-        
-        # NEW: Get and convert blind spot angles to radians
-        blind_spot_deg = self.get_parameter('blind_spot_angles').value
+        self.input_topic = self.get_parameter('input_topic').value
+        self.output_topic = self.get_parameter('output_topic').value
+        self.output_rate_limit = self.get_parameter('output_rate_limit').value
+
+        # --- Parse blind spot angles from flat list to list of pairs (in radians) ---
+        blind_spot_flat = self.get_parameter('blind_spot_angles').value
         self.blind_spot_rad = []
-        for r in blind_spot_deg:
-            if isinstance(r, list) and len(r) == 2:
-                self.blind_spot_rad.append([math.radians(r[0]), math.radians(r[1])])
+        if len(blind_spot_flat) % 2 != 0:
+            self.get_logger().warn("blind_spot_angles should contain pairs of values (start, end) for each blind spot. Ignoring the last value.")
+            blind_spot_flat = blind_spot_flat[:-1]
+        for i in range(0, len(blind_spot_flat), 2):
+            self.blind_spot_rad.append([
+                math.radians(blind_spot_flat[i]),
+                math.radians(blind_spot_flat[i+1])
+            ])
 
         # --- Validate Parameters ---
         if self.group_size <= 0:
@@ -57,18 +65,44 @@ class ScanFilterNode(Node):
         # --- Subscribers and Publishers ---
         self.subscription = self.create_subscription(
             LaserScan,
-            self.get_parameter('input_topic').value,
+            self.input_topic,
             self.scan_callback,
             10)
 
         self.publisher = self.create_publisher(
             LaserScan,
-            self.get_parameter('output_topic').value,
+            self.output_topic,
             10)
 
+        # --- Output rate limiting ---
+        self.min_output_period = 1.0 / max(self.output_rate_limit, 1e-8) if self.output_rate_limit > 0.0 else 0.0
+        self.last_output_time = self.get_clock().now()
+
+        # --- For input topic watchdog ---
+        self.last_msg_time = self.get_clock().now()
+        self.watchdog_timer = self.create_timer(2.0, self.input_topic_check)
+
         self.get_logger().info("Scan Filter Node started.")
+        self.log_all_parameters()
         if self.blind_spot_rad:
-            self.get_logger().info(f"Applying blind spot filters (degrees): {blind_spot_deg}")
+            self.get_logger().info(f"Applying blind spot filters (degrees): {blind_spot_flat}")
+
+    def log_all_parameters(self):
+        param_names = [
+            'input_topic', 'output_topic', 'group_size', 'min_range', 'max_range',
+            'filter_mode', 'filter_intensity', 'outlier_threshold', 'outlier_window_size',
+            'blind_spot_angles', 'output_rate_limit'
+        ]
+        self.get_logger().info("==== Filter Node Parameters ====")
+        for pn in param_names:
+            self.get_logger().info(f"{pn}: {self.get_parameter(pn).value}")
+        self.get_logger().info("===============================")
+
+    def input_topic_check(self):
+        # Warn if no message received recently
+        time_since_msg = (self.get_clock().now() - self.last_msg_time).nanoseconds / 1e9
+        if time_since_msg > 2.0:
+            self.get_logger().warn(f"No LaserScan messages received on {self.input_topic} in the last {time_since_msg:.1f} seconds.")
 
     def apply_filter(self, group: np.ndarray):
         """Applies the selected filter (mean, median, etc.) to a group of points."""
@@ -108,25 +142,35 @@ class ScanFilterNode(Node):
         return filtered
 
     def scan_callback(self, msg: LaserScan):
+        now = self.get_clock().now()
+        self.last_msg_time = now
+
+        # --- Output rate limiting ---
+        if self.min_output_period > 0.0:
+            time_since_last = (now - self.last_output_time).nanoseconds / 1e9
+            if time_since_last < self.min_output_period:
+                return  # Skip publishing this message
+        self.last_output_time = now
+
         ranges = np.array(msg.ranges, dtype=np.float32)
         intensities = np.array(msg.intensities, dtype=np.float32) if self.filter_intensity and len(msg.intensities) == len(ranges) else None
 
-        # --- NEW: Blind Spot Filtering ---
+        # --- Blind Spot Filtering with wraparound support ---
         if self.blind_spot_rad:
-            # Create an array of angles corresponding to each range measurement
             angles = msg.angle_min + np.arange(len(ranges)) * msg.angle_increment
             for r_rad in self.blind_spot_rad:
-                # Create a boolean mask for points within the current blind spot
-                in_blind_spot = (angles >= r_rad[0]) & (angles <= r_rad[1])
-                # Set ranges in the blind spot to infinity
+                if r_rad[0] <= r_rad[1]:
+                    # Normal case
+                    in_blind_spot = (angles >= r_rad[0]) & (angles <= r_rad[1])
+                else:
+                    # Wraparound case
+                    in_blind_spot = (angles >= r_rad[0]) | (angles <= r_rad[1])
                 ranges[in_blind_spot] = float('inf')
 
         # --- Range Filtering ---
-        # Remove out-of-range values by setting them to infinity
         out_of_range = (ranges < self.min_range) | (ranges > self.max_range)
         ranges[out_of_range] = float('inf')
         if intensities is not None:
-            # Use nan for intensities so they don't affect mean calculations
             intensities[out_of_range] = float('nan')
 
         # --- Spatial Outlier Removal ---
@@ -143,13 +187,12 @@ class ScanFilterNode(Node):
         for i in range(num_groups):
             start_idx = i * group_size
             end_idx = (i + 1) * group_size
-            
+
             r_group = ranges[start_idx:end_idx]
             filtered_ranges.append(self.apply_filter(r_group))
 
             if intensities is not None:
                 i_group = intensities[start_idx:end_idx]
-                # nanmean safely computes the mean ignoring nans
                 filtered_intensities.append(
                     float(np.nanmean(i_group)) if not np.all(np.isnan(i_group)) else float('nan')
                 )
@@ -159,7 +202,7 @@ class ScanFilterNode(Node):
             start_idx = num_groups * group_size
             r_group = ranges[start_idx:]
             filtered_ranges.append(self.apply_filter(r_group))
-            
+
             if intensities is not None:
                 i_group = intensities[start_idx:]
                 filtered_intensities.append(
@@ -171,7 +214,6 @@ class ScanFilterNode(Node):
         new_scan.header = msg.header
         new_scan.angle_min = msg.angle_min
         new_scan.angle_increment = msg.angle_increment * group_size
-        # Correctly calculate the angle of the last measurement in the new scan
         new_scan.angle_max = new_scan.angle_min + (len(filtered_ranges) - 1) * new_scan.angle_increment
         new_scan.time_increment = msg.time_increment * group_size
         new_scan.scan_time = msg.scan_time
