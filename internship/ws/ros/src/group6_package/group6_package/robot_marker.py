@@ -12,7 +12,7 @@ class RobotMarker(Node):
         super().__init__('robot_marker_node')
 
         self.position_x = 0.0
-        self.timer_period = 0.1  # ثانیه
+        self.timer_period = 0.1 
 
         self.vel_sub = self.create_subscription(Twist, '/cmd_vel_unstamped', self.cmd_callback, 10)
         self.marker_pub = self.create_publisher(Marker, '/visualization_marker', 10)
@@ -20,7 +20,7 @@ class RobotMarker(Node):
         self.timer = self.create_timer(self.timer_period, self.timer_callback)
         self.last_velocity = 0.0
 
-        self.get_logger().info("📍 Robot Marker Node started.")
+        self.get_logger().info("Robot Marker Node started.")
 
     def cmd_callback(self, msg):
         self.last_velocity = msg.linear.x
@@ -44,7 +44,7 @@ class RobotMarker(Node):
         marker.color.g = 1.0
         marker.color.b = 0.0
         marker.color.a = 1.0
-        marker.lifetime.sec = 0  # دائمی
+        marker.lifetime.sec = 0 
 
         self.marker_pub.publish(marker)
 

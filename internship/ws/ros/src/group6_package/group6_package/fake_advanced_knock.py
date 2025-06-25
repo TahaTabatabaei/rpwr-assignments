@@ -13,7 +13,7 @@ class AdvancedKnockNode(Node):
 
         self.door_open = False
         self.open_counter = 0
-        self.required_stable_count = 4  
+        self.required_stable_count = 4
         self.timer = self.create_timer(0.5, self.timer_callback)
 
         self.get_logger().info("Advanced Knock Node started. Waiting for stable door opening...")
@@ -26,14 +26,9 @@ class AdvancedKnockNode(Node):
         center = total // 2
         front_ranges = ranges[center - half_window: center + half_window]
 
-
         valid = []
         for r in front_ranges:
-            if r < 0.15:
-                valid.append(10.0)      
-            elif r > 5.0:
-                valid.append(5.0)      
-            else:
+            if 0.15 < r < 5.0:
                 valid.append(r)
 
         if not valid:
@@ -42,8 +37,8 @@ class AdvancedKnockNode(Node):
             self.get_logger().info("No valid LiDAR data in front.")
             return
 
-        free_threshold = 1.0         
-        required_ratio = 0.7       
+        free_threshold = 1.5
+        required_ratio = 0.75
         min_obstacle_count = 5 
 
         free_count = sum(1 for r in valid if r > free_threshold)
