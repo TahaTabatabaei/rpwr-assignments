@@ -19,4 +19,6 @@ ros2 run scan_filter filter_scan
 
 -(Optional) Tune Parameters
 If you want to adjust the filter:
-ros2 run scan_filter filter_scan --ros-args -p group_size:=4 -p min_range:=0.2 -p max_range:=3.0
+
+ros2 run scan_filter filter_scan   --ros-args   -p input_topic:=/scan   -p output_topic:=/scan_filtered   -p group_size:=1   -p min_range:=0.35  -p max_range:=7.0   -p filter_mode:=median   -p filter_intensity:=False   -p outlier_threshold:=0.6   -p outlier_window_size:=5   -p blind_spot_angles:="[-135.0, -125.0,-80.0, -70.0,55.0, 80.0,125.0, 135.0"]   -p output_rate_limit:=0.0
+
