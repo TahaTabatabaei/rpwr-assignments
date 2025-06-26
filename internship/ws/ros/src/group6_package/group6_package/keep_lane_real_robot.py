@@ -37,53 +37,74 @@ class WallFollower(Node):
     def __init__(self):
         super().__init__('wall_follower')
 
-        # to handle transformations
-        self.tf_buffer = Buffer()
-        self.tf_listener = TransformListener(self.tf_buffer, self, qos=10)
+        # --- Declare Parameters ---
+        self.declare_parameter('publish_topic', '/base/cmd_vel')
+        self.declare_parameter('scan_topic', '/scan_throttle')
+        self.declare_parameter('cmd_topic', '/ps3/cmd_vel_throttled')
+        self.declare_parameter('remap_topic', '/ps3/cmd_vel')
+        self.declare_parameter('turn_speed', 0.2)
+        self.declare_parameter('min_distance_front', 0.8)
+        self.declare_parameter('min_distance_front_side', 0.9)
+        self.declare_parameter('min_distance_side', 1.0)
+        self.declare_parameter('field_of_view', 64)
+        self.declare_parameter('min_valid', 0.15)
+        self.declare_parameter('max_valid', 5.0)
+        self.declare_parameter('checkValid', True)
+
+        # --- Get Parameters ---
+        self.publish_topic = self.get_parameter('publish_topic').value
+        self.scan_topic = self.get_parameter('scan_topic').value
+        self.cmd_topic = self.get_parameter('cmd_topic').value
+        self.remap_topic = self.get_parameter('remap_topic').value
+
+        self.turn_speed = self.get_parameter('turn_speed').value
+        self.min_distance_front = self.get_parameter('min_distance_front').value
+        self.min_distance_front_side = self.get_parameter('min_distance_front_side').value
+        self.min_distance_side = self.get_parameter('min_distance_side').value
+
+        self.field_of_view = self.get_parameter('field_of_view').value
+        self.min_valid = self.get_parameter('min_valid').value
+        self.max_valid = self.get_parameter('max_valid').value
+        self.checkValid = self.get_parameter('checkValid').value
+
+        # --- Print Parameters ---
+        print_and_log(20*"*")
+        print_and_log(f'publish_topic = {self.publish_topic}')
+        print_and_log(f'scan_topic = {self.scan_topic}')
+        print_and_log(f'cmd_topic = {self.cmd_topic}')
+        print_and_log(f'remap_topic = {self.remap_topic}')
+        print_and_log(f'turn_speed = {self.turn_speed}')
+        print_and_log(f'min_distance_front = {self.min_distance_front}')
+        print_and_log(f'min_distance_front_side = {self.min_distance_front_side}')
+        print_and_log(f'min_distance_side = {self.min_distance_side}')
+        print_and_log(f'field_of_view = {self.field_of_view}')
+        print_and_log(f'min_valid = {self.min_valid}')
+        print_and_log(f'max_valid = {self.max_valid}')
+        print_and_log(f'checkValid = {self.checkValid}')
+        print_and_log(20*"*")
         
         topic_list = self.get_topic_names_and_types()
         self.robot_is_ok = False
 
         for i in range(len(topic_list)):
 
-            if '/ps3/cmd_vel' in topic_list[i]: # publish to /base/cmd_vel for real robot and subscribe to throttled topics
+            if  self.remap_topic in topic_list[i]: # publish to /base/cmd_vel for real robot and subscribe to throttled topics
                 # Publisher to /base/cmd_vel
-                self.cmd_pub = self.create_publisher(Twist, '/base/cmd_vel', 10)
+                self.cmd_pub = self.create_publisher(Twist, self.publish_topic, 10)
 
                 # Subscriber to scan_throttle data
-                self.scan_sub = self.create_subscription(LaserScan, '/scan_throttle', self.scan_callback, 10)
+                self.scan_sub = self.create_subscription(LaserScan, self.scan_topic, self.scan_callback, 10)
 
                 # Subscriber to throttled controller commands
-                self.ps3_sub = self.create_subscription(Twist, '/ps3/cmd_vel_throttled"', self.ps3_callback, qos_profile=10)
+                self.ps3_sub = self.create_subscription(Twist, self.cmd_topic, self.ps3_callback, qos_profile=10)
                 
                 print_and_log("Found real robot...")
                 self.robot_is_ok = True
                 break
-
-        # else:
-            # # Publisher to cmd_vel_unstamped
-            # self.cmd_pub = self.create_publisher(Twist, '/cmd_vel_unstamped', 10) 
-            # print_and_log('Found simulation robot...')
-
-            # # Subscriber to scan data
-            # self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_callback, 10)
-
-            # # Subscriber to controller commands
-            # self.ps3_sub = self.create_subscription(TwistStamped, '/cmd_vel', self.ps3_callback, qos_profile=10)
         
         self.last_msg = Twist()
 
-        # self.throttle_period_sec = 0.1  # 10 Hz => 0.1 second
-        # self.last_time_scan = self.get_clock().now()
-        # self.last_time_ps3 = self.get_clock().now
-
-        # Movement parameters
-        # self.forward_speed = 0.1
-        # self.turn_speed = 0.4
-        self.min_distance_front = 0.8  # meters
-        self.min_distance_front_side = 0.9  # meters
-        self.min_distance_side = 1  # meters
-
+        
         regions_ = {
             'right': 0,
             'fright': 0,
@@ -192,7 +213,7 @@ class WallFollower(Node):
     def turn_left(self):
         msg = Twist()
         msg.linear.x = 0.0
-        msg.angular.z = 0.2
+        msg.angular.z = self.turn_speed
         return msg
 
     def follow_the_wall(self):
@@ -206,116 +227,109 @@ class WallFollower(Node):
     def turn_right(self):
         msg = Twist()
         msg.linear.x = 0.0
-        msg.angular.z = -0.2
+        msg.angular.z = -self.turn_speed
         return msg
 
     def scan_callback(self, msg):
-            
-        # it seems the lidar front is not aligned with the robot base link, so we need to adjust the angle
-        source_frame = msg.header.frame_id
-        target_frame = 'base_link'  # a potential issue --> check in rviz fixed frames if the real robot has this frame or not
-
-        if self.tf_buffer.can_transform(target_frame, source_frame, rclpy.time.Time()):
-
-            t = self.tf_buffer.lookup_transform(
-                target_frame,
-                source_frame,
-                rclpy.time.Time(),
-                timeout=rclpy.duration.Duration(seconds=1.0)
-            )
-
-            roll, pitch, yaw = euler_from_quaternion(
-                [t.transform.rotation.x,
-                t.transform.rotation.y,
-                t.transform.rotation.z,
-                t.transform.rotation.w]
-            )
-            angle_between_frames = math.degrees(yaw)
-
-
-            # print(f"Angle difference between lidar and base_link (in degree): {angle_between_frames}")
-
-            step = math.degrees(msg.angle_increment)
-
-            # Get the index of the front direction in the scan data
-            front_index = int(int((0.0 - msg.angle_min) / msg.angle_increment) - int(angle_between_frames / step))
-            # print(f"Front index: {front_index}")
-
-            min_front_index = front_index - 64
-            max_front_index = front_index + 64
-
-            front_ranges = msg.ranges[min_front_index:max_front_index]
-
-            right_front_index = front_index - 128
-            min_right_front_index = right_front_index - 64
-            max_right_front_index = right_front_index + 64
-
-            if min_right_front_index < 0:
-                min_front_index += len(msg.ranges)
-
-                f_right_ranges = msg.ranges[min_right_front_index:]
-                f_right_ranges.extend(msg.ranges[:max_right_front_index])
-
-            right_index = right_front_index - 128
-
-            if right_index < 0:
-                right_index += len(msg.ranges)
-            
-            min_right_index = right_index - 64
-            max_right_index = right_index + 64
-
-            right_ranges = msg.ranges[min_right_index:max_right_index]
-
-
-            left_front_index = front_index + 128
-
-            min_left_front_index = left_front_index - 64
-            max_left_front_index = left_front_index + 64
-
-            left_front_ranges = msg.ranges[min_left_front_index:max_left_front_index]
-
-
-            left_index = left_front_index + 128
-
-            min_left_index = left_index - 64
-            max_left_index = left_index + 64
-
-            left_ranges = msg.ranges[min_left_index:max_left_index]
-            
-            # print(f"right: {right_index}, fright: {right_front_index}, front: {front_index}, fleft: {left_front_index}, left: {left_index}")
-
-            global regions_
-            regions_ = {
-            'right':  min(min(right_ranges), 10),
-            'fright': min(min(f_right_ranges), 10),
-            'front':  min(min(front_ranges), 10),
-            'fleft':  min(min(left_front_ranges), 10),
-            'left':   min(min(left_ranges), 10),
-            }
-
-
-            self.take_action()
-
-            twist = Twist()
-
-
-            if self.state_ == 0:
-                return
-                twist = self.find_wall()
-            elif self.state_ == 1:
-                twist = self.turn_left()
-            elif self.state_ == 2:
-                return
-                twist = self.follow_the_wall()  
-            elif self.state_ == 3:
-                twist = self.turn_right()
-            else:
-                print_and_log(f"Unknown state: {self.state_}. No action taken.")
-
-            self.cmd_pub.publish(twist)
-
+        valid_ranges = []
+        if self.checkValid:
+            for r in msg.ranges:
+                if (r < self.min_valid):
+                    valid_ranges.append(self.max_valid+10.0)
+                elif (r > self.max_valid):
+                    valid_ranges.append(self.max_valid)
+                else:
+                    valid_ranges.append(r)
         else:
-            self.get_logger().warn(f"Cannot transform from {source_frame} to {target_frame}. Waiting for transform...")
+            valid_ranges = msg.ranges
+        # print(len(msg.ranges))
+
+
+        step = math.degrees(msg.angle_increment)
+        # print(f'degree step = {step}')
+        stepx = (1/step)
+        print(f'stepx = {stepx}')
+        # Get the index of the front direction in the scan data
+
+        front_index = int((0.0 - msg.angle_min) / msg.angle_increment)
+        print(f"Front index: {front_index}")
+
+        # print(f'len ranges = {len(msg.ranges)}')
+
+        min_front_index = front_index - int((self.field_of_view/2)*stepx)
+        # print(min_front_index)
+        max_front_index = front_index + int((self.field_of_view/2)*stepx)
+        # print(max_front_index)
+
+        front_ranges = valid_ranges[min_front_index:max_front_index]
+
+        right_front_index = front_index - int(self.field_of_view*stepx)
+        # print(right_front_index)
+        min_right_front_index = right_front_index - int((self.field_of_view/2)*stepx)
+        # print(min_right_front_index)
+        max_right_front_index = right_front_index + int((self.field_of_view/2)*stepx)
+        # print(max_right_front_index)
+
+        f_right_ranges = valid_ranges[min_right_front_index:max_right_front_index]
+
+
+        max_right_index = min_right_front_index-1
+        # print(max_right_index)
+        min_right_index = 0
+        # print(min_right_index)
+
+        right_ranges = valid_ranges[min_right_index:max_right_index]
+
+
+        left_front_index = front_index + int(self.field_of_view*stepx)
+        # print(left_front_index)
+        min_left_front_index = left_front_index - int((self.field_of_view/2)*stepx)
+        # print(min_left_front_index)
+        max_left_front_index = left_front_index + int((self.field_of_view/2)*stepx)
+        # print(max_left_front_index)
+
+        left_front_ranges = valid_ranges[min_left_front_index:max_left_front_index]
+
+
+        min_left_index = max_left_front_index+1
+        # print(min_left_index)
+        max_left_index = len(valid_ranges)-1
+        # print(max_left_index)
+
+        left_ranges = valid_ranges[min_left_index:max_left_index]
+        
+        # print(f"fright: {right_front_index}, front: {front_index}, fleft: {left_front_index}")
+
+        global regions_
+
+        regions_ = {
+        'right':  min(right_ranges),
+        'fright': min(f_right_ranges),
+        'front':  min(front_ranges),
+        'fleft':  min(left_front_ranges),
+        'left':   min(left_ranges),
+        }
+
+
+        self.take_action()
+
+        twist = Twist()
+
+
+        if self.state_ == 0:
+            return
+            twist = self.find_wall()
+        elif self.state_ == 1:
+            twist = self.turn_left()
+        elif self.state_ == 2:
+            return
+            twist = self.follow_the_wall()  
+        elif self.state_ == 3:
+            twist = self.turn_right()
+        else:
+            print_and_log(f"Unknown state: {self.state_}. No action taken.")
+
+        self.cmd_pub.publish(twist)
 
     def ps3_callback(self, msg: TwistStamped):
         self.last_msg = msg
