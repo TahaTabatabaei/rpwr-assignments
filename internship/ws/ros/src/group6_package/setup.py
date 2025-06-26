@@ -27,7 +27,7 @@ setup(
             'keep_lane_with_teleop = group6_package.keep_lane_with_teleop:main',
             'knock_node = group6_package.knock_node:main',
             'keep_lane_real_robot = group6_package.keep_lane_real_robot:main',
-            'keep_lane_with_teleop_filteredScan = group6_package.keep_lane_with_teleop_filteredScan:main'
+            'keep_lane_with_teleop_filteredScan = group6_package.keep_lane_with_teleop_filteredScan:main',
             'fake_lidar_for_knock = group6_package.fake_lidar_for_knock:main',
             'robot_marker = group6_package.robot_marker:main',
             'advanced_knock_node = group6_package.advanced_knock_node:main',
