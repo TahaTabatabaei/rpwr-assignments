@@ -32,6 +32,7 @@ setup(
             'robot_marker = group6_package.robot_marker:main',
             'advanced_knock_node = group6_package.advanced_knock_node:main',
             'knock_node_gazebo = group6_package.knock_node_gazebo:main',
+            'advanced_knock_real = group6_package.advanced_knock_real:main',
         ],
     },
 )
