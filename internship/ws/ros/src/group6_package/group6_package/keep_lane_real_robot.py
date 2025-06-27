@@ -15,6 +15,8 @@ import logging
 import os
 from datetime import datetime
 
+import statistics
+
 # Create logs directory if it doesn't exist
 log_dir = "internship/scripts/logs_group6"
 os.makedirs(log_dir, exist_ok=True)
@@ -39,10 +41,10 @@ class WallFollower(Node):
 
         # --- Declare Parameters ---
         self.declare_parameter('publish_topic', '/base/cmd_vel')
-        self.declare_parameter('scan_topic', '/scan_throttle')
-        self.declare_parameter('cmd_topic', '/ps3/cmd_vel_throttled')
+        self.declare_parameter('scan_topic', '/scan')
+        self.declare_parameter('cmd_topic', '/ps3/cmd_vel')
         self.declare_parameter('remap_topic', '/ps3/cmd_vel')
-        self.declare_parameter('turn_speed', 0.2)
+        self.declare_parameter('turn_speed', 0.25)
         self.declare_parameter('min_distance_front', 0.8)
         self.declare_parameter('min_distance_front_side', 0.9)
         self.declare_parameter('min_distance_side', 1.0)
@@ -248,11 +250,11 @@ class WallFollower(Node):
         step = math.degrees(msg.angle_increment)
         # print(f'degree step = {step}')
         stepx = (1/step)
-        print(f'stepx = {stepx}')
+        # print(f'stepx = {stepx}')
         # Get the index of the front direction in the scan data
 
         front_index = int((0.0 - msg.angle_min) / msg.angle_increment)
-        print(f"Front index: {front_index}")
+        # print(f"Front index: {front_index}")
 
         # print(f'len ranges = {len(msg.ranges)}')
 
@@ -302,14 +304,21 @@ class WallFollower(Node):
 
         global regions_
 
-        regions_ = {
-        'right':  min(right_ranges),
-        'fright': min(f_right_ranges),
-        'front':  min(front_ranges),
-        'fleft':  min(left_front_ranges),
-        'left':   min(left_ranges),
-        }
+        # regions_ = {
+        # 'right':  min(right_ranges),
+        # 'fright': min(f_right_ranges),
+        # 'front':  min(front_ranges),
+        # 'fleft':  min(left_front_ranges),
+        # 'left':   min(left_ranges),
+        # }
 
+        regions_ = {
+        'right':  statistics.fmean(right_ranges),
+        'fright': statistics.fmean(f_right_ranges),
+        'front':  statistics.fmean(front_ranges),
+        'fleft':  statistics.fmean(left_front_ranges),
+        'left':   statistics.fmean(left_ranges),
+        }
 
         self.take_action()
 
@@ -328,18 +337,22 @@ class WallFollower(Node):
             twist = self.turn_right()
         else:
             print_and_log(f"Unknown state: {self.state_}. No action taken.")
+        self.last_msg = twist
+        # self.cmd_pub.publish(twist)
 
-        self.cmd_pub.publish(twist)
+    def ps3_callback(self, msg: Twist):
+        # self.last_msg = msg
+        print_and_log(f"Received PS3 command: linear.x={self.last_msg.linear.x}, angular.z={self.last_msg.angular.z}")
 
-    def ps3_callback(self, msg: TwistStamped):
-        self.last_msg = msg
-        print_and_log(f"Received PS3 command: linear.x={self.last_msg.twist.linear.x}, angular.z={self.last_msg.twist.angular.z}")
-
-        msg = Twist()
-        msg.linear.x = self.last_msg.twist.linear.x
-        msg.angular.z = self.last_msg.twist.angular.z
+        mymsg = Twist()
+        mymsg.linear.x = msg.linear.x
+        if (abs(self.last_msg.angular.z) > 0.01):
+            mymsg.linear.x = msg.linear.x*0.2
+            mymsg.angular.z = self.last_msg.angular.z
+        else:
+            mymsg.angular.z = msg.angular.z
         
-        self.cmd_pub.publish(msg)
+        self.cmd_pub.publish(mymsg)
 
 
 
