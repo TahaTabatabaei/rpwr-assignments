@@ -326,13 +326,13 @@ class WallFollower(Node):
 
 
         if self.state_ == 0:
-            return
-            twist = self.find_wall()
+            pass
+            # twist = self.find_wall()
         elif self.state_ == 1:
             twist = self.turn_left()
         elif self.state_ == 2:
-            return
-            twist = self.follow_the_wall()  
+            pass
+            # twist = self.follow_the_wall()  
         elif self.state_ == 3:
             twist = self.turn_right()
         else:
