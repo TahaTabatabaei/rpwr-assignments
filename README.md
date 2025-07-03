@@ -1,5 +1,5 @@
 # rpwr-assignments
-Assignments for the course Robot Programming with ROS
+Assignments for the course Robot Programming with ROS (Summer semestre 2025).
 
 Clone the repository, 
 
