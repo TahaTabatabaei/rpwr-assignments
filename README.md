@@ -106,4 +106,4 @@ Points below min_range = 0.15m or above max_range = 3.5m are treated as invalid 
 ## Demo & Presentation
 
 📄 [Final Report (PDF)](https://github.com/TahaTabatabaei/rpwr-assignments/blob/main/images/Robot%20Programming%20with%20ROS.pdf)  
-▶️ [![Watch the demo](https://github.com/TahaTabatabaei/rpwr-assignments/blob/main/images/wallp.png)](https://drive.google.com/file/d/1_moAkDP2B7ynNaq6fkaidSIL31K33pZ3/view?usp=sharing)
+▶️ **Watch the demo**[![](https://github.com/TahaTabatabaei/rpwr-assignments/blob/main/images/wallp.png)](https://drive.google.com/file/d/1_moAkDP2B7ynNaq6fkaidSIL31K33pZ3/view?usp=sharing)
